@@ -15,4 +15,4 @@ var app = http.createServer((request, response) => {
 });
 
 // 3000번 포트를 통해 서버 실행
-app.listen(3000);
+app.listen(80);
