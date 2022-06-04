@@ -1,4 +1,4 @@
-# This Repo is source of Dongtan Coding Lab Academy Website
+# This Repo is source of Dongtan Coding Lab Website
 
 > https://dongtancodinglab.herokuapp.com/
 
