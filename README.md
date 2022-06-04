@@ -4,4 +4,4 @@
 
 * Frontend source was downloaded from sb admin, edited by myself.
 * Node.js were used for server.
-* Hosted by Heroku
+* Hosted by Heroku.
