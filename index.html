@@ -15,6 +15,15 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Image Slider -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider();
+        });
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -29,7 +38,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">학원소개</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">갤러리</a></li>
                         <li class="nav-item"><a class="nav-link" href="#map">방문안내</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">커리큘럼</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">공지</a></li>
@@ -43,20 +52,23 @@
             <div class="container">
                 <div class="masthead-subheading">Affective Computing</div>
                 <div class="masthead-heading text-uppercase">코딩랩학원</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#about">Details</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#gallery">Details</a>
             </div>
         </header>
-        <!-- About -->
-        <section class="page-section" id="about">
+        <!-- gallery -->
+        <section class="page-section bg-light" id="gallery">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">학원소개</h2>
-                    <h3 class="section-subheading text-muted">About Us</h3>
+                    <h2 class="section-heading text-uppercase">갤러리</h2>
+                    <h3 class="section-subheading text-muted">Gallery</h3>
                 </div>
 
                 <!-- 이미지 슬라이더 -->
-
-
+                <div class="slider">
+                    <img src="assets/img/01.jpg">
+                    <img src="assets/img/02.jpg">
+                    <img src="assets/img/03.jpg">
+                </div>
             </div>
         </section>
         <!-- map-->
@@ -83,34 +95,6 @@
                         동탄 남광장 제일프라자 8층
                     </div>
                 </div>
-                <!--
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                </div>
-            -->
             </div>
         </section>
         <!-- Portfolio Grid-->
