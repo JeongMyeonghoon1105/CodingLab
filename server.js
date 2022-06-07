@@ -1,19 +1,10 @@
-var http = require('http');
-var fs = require('fs');
+var express = require('express');
+var app = express();
 
-// 서버 생성
-var app = http.createServer((request, response) => {
-  if(request.url == '/'){
-    url = '/html/index.html';
-  }
-  if(request.url == '/favicon.ico'){
-    return response.writeHead(404);
-  }
-  response.writeHead(200);
-  response.end(fs.readFileSync(__dirname + url));
+app.use(express.static('public'));
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + "/public/html/index.html");
 });
 
 const PORT = process.env.PORT || 3000
-
-// 3000번 포트를 통해 서버 실행
 app.listen(PORT);

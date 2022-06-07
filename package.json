@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JeongMyeonghoon1105/CodingLab-Web/issues"
   },
-  "homepage": "https://github.com/JeongMyeonghoon1105/CodingLab-Web#readme"
+  "homepage": "https://github.com/JeongMyeonghoon1105/CodingLab-Web#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
