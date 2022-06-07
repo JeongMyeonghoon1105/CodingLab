@@ -3,9 +3,8 @@ var fs = require('fs');
 
 // 서버 생성
 var app = http.createServer((request, response) => {
-  var url = request.url;
   if(request.url == '/'){
-    url = '/index.html';
+    url = '/html/index.html';
   }
   if(request.url == '/favicon.ico'){
     return response.writeHead(404);
