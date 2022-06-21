@@ -21,7 +21,9 @@
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
         <script>
             $(document).ready(function(){
-                $('.slider').bxSlider();
+                $('.slider').bxSlider({
+                    auto: true,
+                });
             });
         </script>
     </head>
@@ -46,12 +48,23 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
+        <!-- Masthead
         <header class="masthead">
             <div class="container">
                 <div class="masthead-heading text-uppercase">코딩랩학원</div>
                 <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#Modal1">상담안내</a>
             </div>
+        </header>
+        -->
+        <header class="slider">
+            <img src="../assets/img/main/header-bg.jpg">
+            <img src="../assets/img/main/header-bg.jpg">
+            <img src="../assets/img/main/header-bg.jpg">
+
+            <!-- <div class="container">
+                <div class="masthead-heading text-uppercase">코딩랩학원</div>
+                <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#Modal1">상담안내</a>
+            </div> -->
         </header>
         <!-- 갤러리 -->
         <section class="page-section" id="gallery">
