@@ -2130,6 +2130,14 @@ progress {
   }
 }
 @media (max-width: 991.98px) {
+  .bx-wrapper {
+    margin-top: 4.5rem;
+  }
+  .bx-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .table-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -11401,7 +11409,6 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/main/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
