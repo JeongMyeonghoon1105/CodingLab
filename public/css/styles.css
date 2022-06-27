@@ -11438,10 +11438,18 @@ header.slider {
   background-size: cover;
 }
 .bx-wrapper {
+  width: 100% !important;
+  height: 100vh !important;
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: none !important;
+}
+.bx-viewport {
+  position: relative;
+  width: 100% !important;
+  height: 100vh !important;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
