@@ -2137,6 +2137,9 @@ progress {
     max-width: 100%;
     height: auto;
   }
+  .main-title {
+    font-size: 3.5em !important;
+  }
 
   .table-responsive-lg {
     overflow-x: auto;
@@ -11472,7 +11475,7 @@ header.slider {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4em;
+  font-size: 4.7em;
   font-weight: bold;
   letter-spacing: 6px;
 }
