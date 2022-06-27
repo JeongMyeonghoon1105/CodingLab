@@ -11548,6 +11548,7 @@ header.slider {
   max-width: 100vw;
 }
 .portfolio-modal .modal-content {
+  margin: 10rem 0;
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
