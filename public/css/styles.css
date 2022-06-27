@@ -11446,10 +11446,35 @@ header.slider {
   border: none !important;
 }
 .bx-viewport {
-  position: relative;
   width: 100% !important;
   height: 70vh !important;
+}
+.main-slide {
+  position: relative;
+  width: 100%;
+  height: 70vh;
   overflow: hidden;
+}
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70vh !important;
+  object-fit: cover;
+  margin: auto;
+}
+.main-title {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: 6px;
 }
 
 
