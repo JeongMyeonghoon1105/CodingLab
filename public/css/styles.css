@@ -2137,8 +2137,14 @@ progress {
     max-width: 100%;
     height: auto;
   }
-  .main-title {
+  #main {
     font-size: 3.5em !important;
+  }
+  #dimigo {
+    font-size: 1em !important;
+  }
+  #sw {
+    font-size: 2em !important;
   }
 
   .table-responsive-lg {
