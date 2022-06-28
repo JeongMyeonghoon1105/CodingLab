@@ -2130,7 +2130,7 @@ progress {
   }
 }
 @media (max-width: 991.98px) {
-  .bx-wrapper {
+  header.bx-wrapper {
     margin-top: 4.5rem;
   }
   .bx-wrapper img {
@@ -11446,17 +11446,19 @@ header.slider {
   background-position: center center;
   background-size: cover;
 }
-.bx-wrapper {
+header.bx-wrapper {
   width: 100% !important;
   height: 70vh !important;
+}
+header.bx-viewport {
+  width: 100% !important;
+  height: 70vh !important;
+}
+.bx-wrapper {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: none !important;
-}
-.bx-viewport {
-  width: 100% !important;
-  height: 70vh !important;
 }
 .main-slide {
   position: relative;
