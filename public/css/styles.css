@@ -11469,6 +11469,11 @@ header.bx-viewport {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: none !important;
+  margin-bottom: 0 !important;
+}
+.bx-pager {
+  position: absolute !important;
+  bottom: 30px !important;
 }
 .main-slide {
   position: relative;
