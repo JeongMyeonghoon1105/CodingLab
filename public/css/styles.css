@@ -53,6 +53,180 @@
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
 }
+/* ************************************************************ */
+@import url('../assets/font/nanmusquareround.css');
+
+header.slider {
+  text-align: center;
+  color: #fff;
+  background-image: url("../assets/img/main/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.bx-wrapper {
+  width: 100% !important;
+  height: 60vh !important;
+}
+header.bx-viewport {
+  width: 100% !important;
+  height: 60vh !important;
+}
+.bx-wrapper {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+.bx-pager {
+  position: absolute !important;
+  bottom: 30px !important;
+}
+.main-slide {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60vh !important;
+  object-fit: cover;
+  margin: auto;
+}
+.main-title {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 6px;
+}
+#main {
+  font-size: 4rem !important;
+  font-weight: bold;
+}
+.main-title p {
+  font-size: 2.5rem;
+  font-family: 'NanumSquareRound';
+}
+#sw {
+  width: 30%;
+  left: 35%;
+}
+.main-slide .sub-image {
+  width: 600px;
+  height: 600px;
+  z-index: 30000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 17%;
+  margin: auto;
+}
+
+/* Main 배너 반응형 디자인 */
+@media (max-width: 575.98px) {
+  .bx-prev, .bx-next {
+    display: none;
+  }
+  .main-slide .main-title {
+    font-size: 0.8rem !important;
+  }
+  .main-slide .main-title p {
+    font-size: 1.8rem !important;
+  }
+  .main-slide #main {
+    font-size: 2.5rem !important;
+  }
+}
+@media (max-width: 767.98px) {
+  header.bx-wrapper {
+    margin-top: 4.5rem;
+  }
+  .main-slide .main-title {
+    font-size: 0.5rem;
+  }
+  .main-slide .main-title p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 991.98px) {
+  header.bx-wrapper {
+    margin-top: 4.5rem;
+  }
+  .bx-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+  .bx-viewport {
+    position: relative !important;
+    margin-top: 72px !important;
+  }
+  header.bx-wrapper {
+    margin-top: 4.5rem;
+  }
+  .bx-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+  .bx-viewport {
+    position: relative !important;
+    margin-top: 72px !important;
+  }
+}
+/*
+@media (max-width: 1199.98px) {
+  
+}
+*/
+@media (max-width: 1515px) {
+  #sw {
+    width: 70% !important;
+    left: 50% !important;
+  }
+  .sub-image {
+    display: none !important;
+  }
+}
+@media (max-width: 1630px) {
+  .main-slide .sub-image {
+    width: 380px !important;
+    height: 380px !important;
+  }
+}
+@media (max-width: 1855px) {
+  .main-slide .sub-image {
+    width: 500px;
+    height: 500px;
+  }
+  .main-slide .main-title {
+    font-size: 1.2rem;
+  }
+  .main-slide .main-title p {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 2150px) {
+  #sw {
+    width: 70% !important;
+    left: 50% !important;
+  }
+  .sub-image {
+    display: none !important;
+  }
+}
+/* ************************************************************ */
 
 *,
 *::before,
@@ -2122,41 +2296,14 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .bx-prev, .bx-next {
-    display: none;
-  }
 }
 @media (max-width: 767.98px) {
   .table-responsive-md {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  header.bx-wrapper {
-    margin-top: 4.5rem;
-  }
-  #main {
-    font-size: 3em !important;
-  }
-  #dimigo {
-    font-size: 0.8em !important;
-  }
-  #sw {
-    font-size: 1.5em !important;
-  }
 }
 @media (max-width: 991.98px) {
-  header.bx-wrapper {
-    margin-top: 4.5rem;
-  }
-  .bx-wrapper img {
-    max-width: 100%;
-    height: auto;
-  }
-  .bx-viewport {
-    position: relative !important;
-    margin-top: 72px !important;
-  }
-
   .table-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -2172,26 +2319,6 @@ progress {
   .table-responsive-xxl {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }
-}
-
-@media (max-width: 1855px) {
-  #sw {
-    width: 70% !important;
-    left: 50% !important;
-  }
-  .sub-image {
-    display: none !important;
-  }
-}
-
-@media (min-width: 2150px) {
-  #sw {
-    width: 70% !important;
-    left: 50% !important;
-  }
-  .sub-image {
-    display: none !important;
   }
 }
 
@@ -11467,65 +11594,6 @@ header.masthead {
   line-height: 3.25rem;
   margin-bottom: 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-header.slider {
-  text-align: center;
-  color: #fff;
-  background-image: url("../assets/img/main/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-}
-header.bx-wrapper {
-  width: 100% !important;
-  height: 60vh !important;
-}
-header.bx-viewport {
-  width: 100% !important;
-  height: 60vh !important;
-}
-.bx-wrapper {
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border: none !important;
-  margin-bottom: 0 !important;
-}
-.bx-pager {
-  position: absolute !important;
-  bottom: 30px !important;
-}
-.main-slide {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
-}
-.slide-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 60vh !important;
-  object-fit: cover;
-  margin: auto;
-}
-.main-title {
-  position: absolute;
-  width: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4.7em;
-  font-weight: bold;
-  letter-spacing: 6px;
-}
-#sw {
-  width: 30%;
-  left: 35%;
 }
 
 
