@@ -2173,6 +2173,13 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+  #sw {
+    width: 70% !important;
+    left: 50% !important;
+  }
+  .sub-image {
+    display: none !important;
+  }
 }
 .form-label {
   margin-bottom: 0.5rem;
@@ -11494,7 +11501,7 @@ header.bx-viewport {
 }
 .main-title {
   position: absolute;
-  width: 90%;
+  width: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -11503,7 +11510,8 @@ header.bx-viewport {
   letter-spacing: 6px;
 }
 #sw {
-  font-size: 3em;
+  width: 30%;
+  left: 40%;
 }
 
 
