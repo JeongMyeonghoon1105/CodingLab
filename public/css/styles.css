@@ -207,16 +207,15 @@ header.bx-viewport {
 }
 
 @media (max-width: 1350px) {
-  .main-title {
-    text-shadow: 1px 2px 2px black;
-  }
   .sub-image {
     opacity: 0.6;
   }
 }
 
 @media (max-width: 1515px) {
-  
+  #unity-image {
+    opacity: 0.6;
+  }
 }
 @media (max-width: 1630px) {
   
