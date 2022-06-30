@@ -2173,6 +2173,9 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+}
+
+@media (max-width: 1855px) {
   #sw {
     width: 70% !important;
     left: 50% !important;
@@ -2181,6 +2184,17 @@ progress {
     display: none !important;
   }
 }
+
+@media (min-width: 2150px) {
+  #sw {
+    width: 70% !important;
+    left: 50% !important;
+  }
+  .sub-image {
+    display: none !important;
+  }
+}
+
 .form-label {
   margin-bottom: 0.5rem;
 }
@@ -11511,7 +11525,7 @@ header.bx-viewport {
 }
 #sw {
   width: 30%;
-  left: 40%;
+  left: 35%;
 }
 
 
