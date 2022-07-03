@@ -144,6 +144,11 @@ header.bx-viewport {
   height: 300px;
   right: 22%;
 }
+#footer-text {
+  width: 70%;
+  margin-left: 50px;
+  text-align: left;
+}
 
 /* Main 배너 반응형 디자인 */
 @media (max-width: 575.98px) {
@@ -177,6 +182,18 @@ header.bx-viewport {
     width: 70% !important;
     left: 50% !important;
     text-align: center;
+  }
+  #footer-logo, #footer-adress {
+    display: none;
+  }
+  #footer-text {
+    height: 1.5em;
+    margin-left: 0;
+  }
+}
+@media (max-width: 371px) {
+  #copyright {
+    width: 100vw;
   }
 }
 @media (max-width: 991.98px) {
