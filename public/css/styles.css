@@ -73,6 +73,9 @@ header.bx-viewport {
   width: 100% !important;
   height: 60vh !important;
 }
+#gallery .gallery {
+  margin-top: 1.5rem;
+}
 .bx-wrapper {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
@@ -116,7 +119,7 @@ header.bx-viewport {
   z-index: 30020;
 }
 #main {
-  font-size: 4rem !important;
+  font-size: 4.1rem !important;
   font-weight: bold;
   left: 50%;
   text-align: center !important;
@@ -193,7 +196,7 @@ header.bx-viewport {
 }
 @media (max-width: 371px) {
   #copyright {
-    width: 100vw;
+    width: 95vw;
   }
 }
 @media (max-width: 991.98px) {
@@ -495,7 +498,7 @@ a > code {
 }
 
 kbd {
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.4.1rem;
   font-size: 0.875em;
   color: #fff;
   background-color: #212529;
@@ -736,7 +739,7 @@ progress {
 }
 @media (min-width: 1200px) {
   .display-3 {
-    font-size: 4rem;
+    font-size: 4.1rem;
   }
 }
 
@@ -6003,7 +6006,7 @@ textarea.form-control-lg {
   position: absolute;
   display: block;
   width: 0.8rem;
-  height: 0.4rem;
+  height: 0.4.1rem;
 }
 .tooltip .tooltip-arrow::before {
   position: absolute;
@@ -6013,54 +6016,54 @@ textarea.form-control-lg {
 }
 
 .bs-tooltip-top, .bs-tooltip-auto[data-popper-placement^=top] {
-  padding: 0.4rem 0;
+  padding: 0.4.1rem 0;
 }
 .bs-tooltip-top .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow {
   bottom: 0;
 }
 .bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
   top: -1px;
-  border-width: 0.4rem 0.4rem 0;
+  border-width: 0.4.1rem 0.4.1rem 0;
   border-top-color: #000;
 }
 
 .bs-tooltip-end, .bs-tooltip-auto[data-popper-placement^=right] {
-  padding: 0 0.4rem;
+  padding: 0 0.4.1rem;
 }
 .bs-tooltip-end .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow {
   left: 0;
-  width: 0.4rem;
+  width: 0.4.1rem;
   height: 0.8rem;
 }
 .bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
   right: -1px;
-  border-width: 0.4rem 0.4rem 0.4rem 0;
+  border-width: 0.4.1rem 0.4.1rem 0.4.1rem 0;
   border-right-color: #000;
 }
 
 .bs-tooltip-bottom, .bs-tooltip-auto[data-popper-placement^=bottom] {
-  padding: 0.4rem 0;
+  padding: 0.4.1rem 0;
 }
 .bs-tooltip-bottom .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow {
   top: 0;
 }
 .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
   bottom: -1px;
-  border-width: 0 0.4rem 0.4rem;
+  border-width: 0 0.4.1rem 0.4.1rem;
   border-bottom-color: #000;
 }
 
 .bs-tooltip-start, .bs-tooltip-auto[data-popper-placement^=left] {
-  padding: 0 0.4rem;
+  padding: 0 0.4.1rem;
 }
 .bs-tooltip-start .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow {
   right: 0;
-  width: 0.4rem;
+  width: 0.4.1rem;
   height: 0.8rem;
 }
 .bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
   left: -1px;
-  border-width: 0.4rem 0 0.4rem 0.4rem;
+  border-width: 0.4.1rem 0 0.4.1rem 0.4.1rem;
   border-left-color: #000;
 }
 
@@ -11529,7 +11532,7 @@ p {
   font-weight: 400;
   font-style: italic;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  margin-bottom: 4rem;
+  margin-bottom: 4.1rem;
 }
 
 @media (min-width: 768px) {
@@ -11659,7 +11662,7 @@ header.masthead {
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 4.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4.1rem;
   }
 }
 #curriculum .portfolio-item {
@@ -11921,8 +11924,8 @@ header.masthead {
   text-align: center;
 }
 .team-member img {
-  width: 14rem;
-  height: 14rem;
+  width: 14.1rem;
+  height: 14.1rem;
   border: 0.5rem solid rgba(0, 0, 0, 0.1);
 }
 .team-member h4, .team-member .h4 {
