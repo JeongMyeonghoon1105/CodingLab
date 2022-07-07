@@ -31,14 +31,18 @@ app.post('/post', (req, res) => {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summernote Practice</title>
+    <title>동탄코딩랩학원</title>
     <!-- Style -->
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
-    <header>
-      <div>Summernote Practice</div>
-    </header>`
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+          <a class="navbar-brand" href="/">
+            Coding lab
+          </a>
+      </div>
+  </nav>`
   text = text + req.body.editordata;
   text = text + `
   </body>
