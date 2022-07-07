@@ -35,16 +35,18 @@ app.post('/post', (req, res) => {
     <!-- Style -->
     <link rel="stylesheet" href="/css/styles.css">
   </head>
-  <body>
+  <body style="background-color: background-color: rgb(238, 238, 238);">
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
+      <div class="container" id="posting">
           <a class="navbar-brand" href="/">
             Coding lab
           </a>
       </div>
-  </nav>`
+  </nav>
+  <div class="container" style="background-color: white; margin-top: 5rem">`
   text = text + req.body.editordata;
   text = text + `
+  </div>
   </body>
   </html>`;
 

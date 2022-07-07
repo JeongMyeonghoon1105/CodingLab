@@ -164,6 +164,9 @@ header.bx-viewport {
   margin-left: 50px;
   text-align: left;
 }
+#posting img {
+  width: 100%;
+}
 
 /* Main 배너 반응형 디자인 */
 @media (max-width: 575.98px) {
