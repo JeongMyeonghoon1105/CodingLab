@@ -1,7 +1,9 @@
 # This Repo is source of Dongtan Coding Lab Website
 
-> https://dongtancodinglab.herokuapp.com/
+> https://동탄코딩랩.com
 
-* Frontend source was downloaded from sb admin, edited by myself.
-* Node.js were used for server.
-* Hosted by Heroku.
+* Frontend source is based on sb admin template.
+* Jquery is partially used for UI.
+* Images were taken by ourselves or downloaded from pixabay.
+* Node.js is used for server.
+* Hosted by our own Ubuntu Server.
