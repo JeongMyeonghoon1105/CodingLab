@@ -31,9 +31,9 @@ app.get('/', (req, res) => {
     topics.forEach((elem) => {
       list = list + `<a href="/posting?id=${elem.id}" style="width: 90%; margin: 20px 10px; padding: 10px 5px; border-bottom: 2px solid #ffdf6a; font-size: 1.5em; color: gray; text-decoration: none;">${elem.id}번 공지</a>`
     });
-    console.log(list);
+    // console.log(list);
     var queryData = url.parse(req.url, true).query;
-    console.log(queryData.id);
+    // console.log(queryData.id);
     var main = `
       <!DOCTYPE html>
       <html lang="en">
@@ -645,61 +645,64 @@ app.get('/write', (req, res) => {
 
 app.get('/posting', (req, res) => {
   var queryData = url.parse(req.url, true).query;
-  console.log(queryData.id);
+  // console.log(queryData.id);
   db.query(`SELECT id, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
     if (err) throw err;
-    console.log(topics[0].content)
-    res.send(`${topics[0].content}`);
+    // console.log(topics[0].content);
+    var render = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>동탄코딩랩학원</title>
+      <link rel="icon" type="image/x-icon" href="assets/img/logos/logo.png">
+      <!-- Style -->
+      <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body style="background-color: #FAFBFC">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container" id="posting">
+        <a class="navbar-brand" href="/">
+          Coding lab
+        </a>
+      </div>
+    </nav>
+    <div class="container" style="background-color: white; margin-top: 4.5rem; padding: 1rem; min-height: 100vh;">`
+    render = render + topics[0].content;
+    render = render + `
+    </div>
+    <!-- Footer -->
+    <footer class="footer py-4" style="background-color: #212529;">
+      <div class="container">
+        <div class="row align-items-center" style="display: flex; justify-content: space-between;">
+          <div class="col-lg-4 text-lg-start" style="color: white; float: left; display: flex; width: 80vw">
+            <div class="navbar-brand" id="footer-logo">
+              <text style="color: #ffc800; font-weight: bold; letter-spacing: 0.0625em;">CODING LAB</text>
+            </div>
+            <div id="footer-text">
+              <text id="footer-adress">경기도 화성시 동탄반석로 120, 제일프라자 8층<br></text>
+              <div id="copyright">Copyright &copy; 동탄코딩랩 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </body>
+    </html>
+    `
+    res.send(render);
   })
 });
 
 app.post('/post', (req, res) => {
-  var text = `
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>동탄코딩랩학원</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/logos/logo.png">
-    <!-- Style -->
-    <link rel="stylesheet" href="/css/styles.css">
-  </head>
-  <body style="background-color: #F5FBFD">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container" id="posting">
-      <a class="navbar-brand" href="/">
-        Coding lab
-      </a>
-    </div>
-  </nav>
-  <div class="container" style="background-color: white; margin-top: 4.5rem; padding: 1rem; min-height: 100vh;">`
+  var text = ``
   text = text + req.body.editordata;
-  text = text + `
-  </div>
-  <!-- Footer -->
-  <footer class="footer py-4" style="background-color: #212529;">
-    <div class="container">
-      <div class="row align-items-center" style="display: flex; justify-content: space-between;">
-        <div class="col-lg-4 text-lg-start" style="color: white; float: left; display: flex; width: 80vw">
-          <div class="navbar-brand" id="footer-logo">
-            <text style="color: #ffc800; font-weight: bold; letter-spacing: 0.0625em;">CODING LAB</text>
-          </div>
-          <div id="footer-text">
-            <text id="footer-adress">경기도 화성시 동탄반석로 120, 제일프라자 8층<br></text>
-            <div id="copyright">Copyright &copy; 동탄코딩랩 2022</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  </body>
-  </html>`;
 
   db.query(`INSERT INTO post(content, datetime) VALUES (?,  DATE_FORMAT(now(), '%Y-%m-%d'))`, [text], (err, topics) => {
     if (err) throw err;
-    console.log('Inserted');
+    // console.log('Inserted');
     res.redirect('/');
   })
 });
