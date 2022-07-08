@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     var list = `<br>`;
     if (err) throw err;
     topics.forEach((elem) => {
-      list = list + `<a href="/posting?id=${elem.id}" style="text-decoration: none;">${elem.id}번 공지</a><br>`
+      list = list + `<a href="/posting?id=${elem.id}" style="width: 90%; margin: 20px 10px; padding: 10px 5px; border-bottom: 2px solid #ffdf6a; font-size: 1.5em; color: gray; text-decoration: none;">${elem.id}번 공지</a>`
     });
     console.log(list);
     var queryData = url.parse(req.url, true).query;
