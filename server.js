@@ -1,6 +1,16 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
+// $ npm install mysql
+var mysql = require('mysql');
+var db = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'audgns9809',
+  database : 'codinglab'
+});
+ 
+db.connect();
 
 // $ npm install --save body-parser
 var bodyParser = require('body-parser')
@@ -19,8 +29,12 @@ app.get('/write', (req, res) => {
   res.sendFile(__dirname + "/public/html/writing.html");
 });
 
-app.get('/posting', (req, res) => {
-  res.sendFile(__dirname + "/public/List/post.html");
+app.get('/posting-1', (req, res) => {
+  db.query(`SELECT content FROM post WHERE id=2`, (err, topics) => {
+    if (err) throw err;
+    console.log(topics[0].content);
+    res.send(`${topics[0].content}`);
+  })
 });
 
 app.post('/post', (req, res) => {
@@ -50,10 +64,16 @@ app.post('/post', (req, res) => {
   </body>
   </html>`;
 
-  filePath = __dirname + '/public/List/post.html';
+  // filePath = __dirname + '/public/List/post.html';
 
-  fs.writeFileSync(filePath, text);
-  res.redirect('/');
+  // fs.writeFileSync(filePath, text);
+  // res.redirect('/');
+
+  db.query(`INSERT INTO post(content, datetime) VALUES (?,  DATE_FORMAT(now(), '%Y-%m-%d'))`, [text], (err, topics) => {
+    if (err) throw err;
+    console.log('Inserted');
+    res.redirect('/');
+  })
 });
 
 const PORT = process.env.PORT || 3000
