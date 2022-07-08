@@ -83,7 +83,7 @@ app.get('/', (req, res) => {
                               <li class="nav-item"><a class="nav-link" href="#curriculum">커리큘럼</a></li>
                               <li class="nav-item"><a class="nav-link" href="#gallery">갤러리</a></li>
                               <li class="nav-item"><a class="nav-link" href="#consulting">상담안내</a></li>
-                              <!-- <li class="nav-item"><a class="nav-link" href="#notice">학원소식</a></li> -->
+                              <li class="nav-item"><a class="nav-link" href="#notice">학원소식</a></li>
                               <li class="nav-item"><a class="nav-link" href="#map">방문안내</a></li>
                           </ul>
                       </div>
