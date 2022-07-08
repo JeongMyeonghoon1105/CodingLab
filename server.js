@@ -233,7 +233,7 @@ app.get('/', (req, res) => {
               </section>
               <!-- 갤러리 -->
               <section class="page-section" id="gallery">
-                  <div class="container">
+                  <div class="container" id="gallery-container">
                       <div class="text-center">
                           <h2 class="section-heading text-uppercase">갤러리</h2><br>
                       </div>
