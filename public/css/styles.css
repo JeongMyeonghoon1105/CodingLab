@@ -164,8 +164,11 @@ header.bx-viewport {
   margin-left: 50px;
   text-align: left;
 }
-#posting img {
-  width: 100%;
+#posting-container {
+  overflow: hidden;
+}
+#posting-container img {
+  width: 100% !important;
 }
 
 /* Main 배너 반응형 디자인 */

@@ -661,7 +661,7 @@ app.get('/posting', (req, res) => {
       <!-- Style -->
       <link rel="stylesheet" href="/css/styles.css">
     </head>
-    <body style="background-color: #FAFBFC">
+    <body style="background-color: #FAFAFA">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container" id="posting">
         <a class="navbar-brand" href="/">
@@ -669,7 +669,7 @@ app.get('/posting', (req, res) => {
         </a>
       </div>
     </nav>
-    <div class="container" style="background-color: white; margin-top: 4.5rem; padding: 1rem; min-height: 100vh;">`
+    <div class="container" style="background-color: white; margin-top: 4.5rem; padding: 4rem; min-height: 100vh;" id="posting-container">`
     render = render + topics[0].content;
     render = render + `
     </div>
