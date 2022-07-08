@@ -1,6 +1,9 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
+var url = require('url');
+// $ npm install query-string
+var qs = require('query-string');
 // $ npm install mysql
 var mysql = require('mysql');
 var db = mysql.createConnection({
@@ -26,9 +29,11 @@ app.get('/', (req, res) => {
     var list = `<br>`;
     if (err) throw err;
     topics.forEach((elem) => {
-      list = list + `<a href="#!">${elem.id}번 공지</a><br>`
+      list = list + `<a href="/posting?id=${elem.id}" style="text-decoration: none;">${elem.id}번 공지</a><br>`
     });
     console.log(list);
+    var queryData = url.parse(req.url, true).query;
+    console.log(queryData.id);
     var main = `
       <!DOCTYPE html>
       <html lang="en">
@@ -639,8 +644,11 @@ app.get('/write', (req, res) => {
 });
 
 app.get('/posting', (req, res) => {
-  db.query(`SELECT content FROM post WHERE id=9`, (err, topics) => {
+  var queryData = url.parse(req.url, true).query;
+  console.log(queryData.id);
+  db.query(`SELECT id, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
     if (err) throw err;
+    console.log(topics[0].content)
     res.send(`${topics[0].content}`);
   })
 });
