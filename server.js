@@ -706,6 +706,9 @@ app.post('/post', (req, res) => {
     res.redirect('/');
   })
 });
+app.get('/dimigo', (req, res) => {
+  res.sendFile(__dirname + "/public/html/dimigo.html");
+});
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT);
