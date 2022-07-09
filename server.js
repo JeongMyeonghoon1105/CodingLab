@@ -8,8 +8,8 @@ var qs = require('query-string');
 var mysql = require('mysql');
 var db = mysql.createConnection({
   host     : 'localhost',
-  user     : 'root',
-  password : 'audgns9809',
+  user     : 'codinglab',
+  password : '학원 DB 비밀번호',
   database : 'codinglab'
 });
  
