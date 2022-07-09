@@ -9,7 +9,7 @@ var mysql = require('mysql');
 var db = mysql.createConnection({
   host     : 'localhost',
   user     : 'codinglab',
-  password : 'Our_Password',
+  password : '학원 DB 비밀번호',
   database : 'codinglab'
 });
  
