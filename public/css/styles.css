@@ -91,9 +91,12 @@ header.bx-viewport {
   box-shadow: none !important;
   border: none !important;
   margin-bottom: 0 !important;
-  margin-top: 4.5rem;
+  margin-top: 4rem;
 }
 #gallery-container .bx-wrapper {
+  margin-top: 0;
+}
+.bx-viewport {
   margin-top: 0;
 }
 .bx-pager {
@@ -170,6 +173,12 @@ header.bx-viewport {
 #posting-container img {
   width: 100% !important;
 }
+.note-icon-caret {
+  display: none;
+}
+.note-editing-area, .note-editable {
+  height: 50vh;
+}
 
 /* Main 배너 반응형 디자인 */
 @media (max-width: 575.98px) {
@@ -193,6 +202,9 @@ header.bx-viewport {
   }
   .bx-viewport {
     margin-top: 4.1rem;
+  }
+  #gallery-container .bx-wrapper .bx-viewport {
+    margin-top: 0;
   }
   .main-slide .main-title {
     font-size: 0.5rem;
@@ -226,15 +238,8 @@ header.bx-viewport {
   .bx-viewport {
     margin-top: 4.1rem;
   }
-  .bx-wrapper img {
-    max-width: 100%;
-    height: auto;
-  }
-  .bx-viewport {
-    position: relative !important;
-    /*
-    margin-top: 72px !important;
-    */
+  #gallery-container .bx-wrapper .bx-viewport {
+    margin-top: 0;
   }
   .bx-wrapper img {
     max-width: 100%;
@@ -242,9 +247,13 @@ header.bx-viewport {
   }
   .bx-viewport {
     position: relative !important;
-    /*
-    margin-top: 72px !important;
-    */
+  }
+  .bx-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+  .bx-viewport {
+    position: relative !important;
   }
 }
 
