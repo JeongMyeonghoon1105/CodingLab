@@ -259,6 +259,14 @@ var template = {
                         <h2 class="section-heading text-uppercase">학원소식</h2>
                     </div>
                     <div class="row" style="display: flex; justify-content: center;">
+                    <div style="width: 100%; background-color: #EFF2FB;
+                                padding: 10px 5px; margin-top: 1rem;
+                                border-top: 2px solid #F2EFFB; border-bottom: 2px solid #F2EFFB;
+                                font-size: 1.2em; color: gray;
+                                align-items: space-between">
+                                <div style="float: left; margin-left: 25px; border-left: 3px solid #E6E0F8; padding-left: 20px;">제목</div>
+                                <div style="float: right; margin-right: 200px; border-left: 3px solid #E6E0F8; padding-left: 20px;">날짜</div>
+                    </div>
                       ${list}
                     </div>
                 </div>

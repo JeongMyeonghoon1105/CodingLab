@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     var list = `<br>`;
     if (err) throw err;
     topics.forEach((elem) => {
-      list = list + `<a href="/posting?id=${elem.id}" style="width: 90%; margin: 20px 10px; padding: 10px 5px; border-bottom: 1px solid #ffdf6a; font-size: 1.5em; color: gray; text-decoration: none;">${elem.id}번 공지</a>`
+      list = list + `<a href="/posting?id=${elem.id}" style="width: 100%; margin: 5px 10px; padding: 10px 30px; border-bottom: 1px solid #F2EFFB; font-size: 1.2em; color: gray; text-decoration: none;">${elem.id}번 공지</a>`
     });
     var queryData = url.parse(req.url, true).query;
     var main = template.main(list);
