@@ -26,6 +26,7 @@ var signin = 0;
 
 // 메인 페이지
 app.get('/', (req, res) => {
+  signin = 0;
   db.query(`SELECT id, title, DATE_FORMAT(datetime, '%y-%m-%d') AS datetime FROM post`, (err, topics) => {
     var list = `<br>`;
     if (err) throw err;
