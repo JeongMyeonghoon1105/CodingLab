@@ -221,21 +221,25 @@ var template = {
                     <div class="row">
                         <!-- 전화상담 -->
                         <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                            <div class="portfolio-item">
-                                <div class="portfolio-link">
-                                    <div class="portfolio-hover">
+                            <div class="portfolio-item" style="height: 100%;">
+                                <div class="portfolio-link" style="height: 100%;">
+                                    <!-- <img class="img-fluid" src="assets/img/consulting/consulting01.png" alt="..." style="border-radius: 8px;"/> -->
+                                    <div style="height: 100%; background-color: white; border-radius: 8px; padding: 10%; border: 1px solid rgb(234, 234, 234);">
+                                      <p style="font-size: 1.5em; font-weight: bold;">전화상담</p>
+                                      <text style="font-size: 1.2em;">TEL : 010-4393-1124</text>
                                     </div>
-                                    <img class="img-fluid" src="assets/img/consulting/consulting01.png" alt="..." style="border-radius: 8px;"/>
                                 </div>
                             </div>
                         </div>
                         <!-- 방문상담 -->
-                        <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                            <div class="portfolio-item">
-                                <div class="portfolio-link">
-                                    <div class="portfolio-hover">
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/consulting/consulting02.png" alt="..." style="border-radius: 8px;"/>
+                        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                            <div class="portfolio-item" style="height: 100%;">
+                                <div class="portfolio-link" style="height: 100%;">
+                                    <!-- <img class="img-fluid" src="assets/img/consulting/consulting01.png" alt="..." style="border-radius: 8px;"/> -->
+                                    <div style="height: 100%; background-color: white; border-radius: 8px; padding: 10%; border: 1px solid rgb(234, 234, 234);">
+                                    <p style="font-size: 1.5em; font-weight: bold;">방문상담</p>
+                                    <text style="font-size: 1.2em;">경기도 화성시 동탄반석로 120, 제일프라자 8층</text>
+                                  </div>
                                 </div>
                             </div>
                         </div>
