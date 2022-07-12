@@ -28,10 +28,10 @@ app.get('/', (req, res) => {
     var list = `<br>`;
     if (err) throw err;
     topics.forEach((elem) => {
-      list = list + `<a href="/posting?id=${elem.id}" class="posting-items">
-                        <div class="title">${elem.title}</div>
-                        <div class="datetime">${elem.datetime}</div>
-                    </a>`
+      list = `<a href="/posting?id=${elem.id}" class="posting-items">
+                <div class="title">${elem.title}</div>
+                <div class="datetime">${elem.datetime}</div>
+            </a>` + list
     });
     var queryData = url.parse(req.url, true).query;
     var main = template.main(list);
@@ -45,9 +45,11 @@ app.get('/write', (req, res) => {
 // 게시물 페이지
 app.get('/posting', (req, res) => {
   var queryData = url.parse(req.url, true).query;
-  db.query(`SELECT id, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
+  db.query(`SELECT id, title, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
     if (err) throw err;
     var render = template.top();
+    render = render + `<h1 style="font-size: 2.5rem; display: block; font-size: 2em; font-weight: bold;">${topics[0].title}</h1>`;
+    render = render + `<div style="width: 100%; height: 1px; margin: 50px 0; background-color: lightgray;"></div>`;
     render = render + topics[0].content;
     render = render + template.bottom();
     res.send(render);
