@@ -22,6 +22,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static('public'));
 
+var signin = 0;
+
 // 메인 페이지
 app.get('/', (req, res) => {
   db.query(`SELECT id, title, DATE_FORMAT(datetime, '%y-%m-%d') AS datetime FROM post`, (err, topics) => {
@@ -40,7 +42,11 @@ app.get('/', (req, res) => {
 });
 // 게시물 작성 페이지
 app.get('/write', (req, res) => {
-  res.sendFile(__dirname + "/public/html/writing.html");
+  if (signin == 0) {
+    res.redirect('/signin');
+  } else {
+    res.sendFile(__dirname + "/public/html/writing.html");
+  }
 });
 // 게시물 페이지
 app.get('/posting', (req, res) => {
@@ -67,7 +73,24 @@ app.post('/post', (req, res) => {
 });
 // 로그인 페이지
 app.get('/signin', (req, res) => {
-  res.sendFile(__dirname + "/public/html/signin.html");
+  if (signin == 0){
+    res.sendFile(__dirname + "/public/html/signin.html");
+  } else {
+    res.redirect('/');
+  }
+});
+// 로그인 프로세스
+app.post('/signin_process', (req, res) => {
+  db.query(`SELECT pw FROM pw WHERE id=1`, (err, topics) => {
+    if (err) throw err;
+    var password = req.body.password;
+    if (topics[0].pw == password) {
+      signin = 1;
+      res.redirect('/write');
+    } else {
+      res.redirect('/signin');
+    }
+  })
 });
 // 포트 지정 및 Listen
 const PORT = process.env.PORT || 3000
