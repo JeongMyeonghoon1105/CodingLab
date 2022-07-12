@@ -24,12 +24,12 @@ app.use(express.static('public'));
 
 // 메인 페이지
 app.get('/', (req, res) => {
-  db.query(`SELECT id, DATE_FORMAT(datetime, '%y-%m-%d') AS datetime FROM post`, (err, topics) => {
+  db.query(`SELECT id, title, DATE_FORMAT(datetime, '%y-%m-%d') AS datetime FROM post`, (err, topics) => {
     var list = `<br>`;
     if (err) throw err;
     topics.forEach((elem) => {
       list = list + `<a href="/posting?id=${elem.id}" class="posting-items">
-                        <div class="title">${elem.id}번 공지 - lorem ipsum dolor sit amet</div>
+                        <div class="title">${elem.title}</div>
                         <div class="datetime">${elem.datetime}</div>
                     </a>`
     });
@@ -55,10 +55,10 @@ app.get('/posting', (req, res) => {
 });
 // 게시물 업로딩 프로세스
 app.post('/post', (req, res) => {
-  var text = ``
-  text = text + req.body.editordata;
+  var title = req.body.title;
+  var content = req.body.editordata;
 
-  db.query(`INSERT INTO post(content, datetime) VALUES (?,  DATE_FORMAT(now(), '%Y-%m-%d'))`, [text], (err, topics) => {
+  db.query(`INSERT INTO post(title, content, datetime) VALUES (?, ?, DATE_FORMAT(now(), '%Y-%m-%d'))`, [title, content], (err, topics) => {
     if (err) throw err;
     res.redirect('/');
   })

@@ -197,6 +197,9 @@ header.bx-viewport {
   width: 30%;
   padding-left: 25px;
 }
+.note-statusbar {
+  display: none;
+}
 
 /* Main 배너 반응형 디자인 */
 @media (max-width: 575.98px) {
