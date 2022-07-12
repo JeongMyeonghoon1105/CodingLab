@@ -24,11 +24,14 @@ app.use(express.static('public'));
 
 // 메인 페이지
 app.get('/', (req, res) => {
-  db.query(`SELECT id, datetime FROM post`, (err, topics) => {
+  db.query(`SELECT id, DATE_FORMAT(datetime, '%y-%m-%d') AS datetime FROM post`, (err, topics) => {
     var list = `<br>`;
     if (err) throw err;
     topics.forEach((elem) => {
-      list = list + `<a href="/posting?id=${elem.id}" style="width: 100%; margin: 5px 10px; padding: 10px 30px; border-bottom: 1px solid #F2EFFB; font-size: 1.2em; color: gray; text-decoration: none;">${elem.id}번 공지</a>`
+      list = list + `<a href="/posting?id=${elem.id}" class="posting-items">
+                        <div class="title">${elem.id}번 공지 - lorem ipsum dolor sit amet</div>
+                        <div class="datetime">${elem.datetime}</div>
+                    </a>`
     });
     var queryData = url.parse(req.url, true).query;
     var main = template.main(list);

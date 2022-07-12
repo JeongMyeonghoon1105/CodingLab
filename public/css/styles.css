@@ -179,6 +179,24 @@ header.bx-viewport {
 .note-editing-area, .note-editable {
   height: 50vh;
 }
+.posting-items {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid #F2EFFB;
+  font-size: 1.2em;
+  color: gray !important;
+}
+.row .posting-items .title {
+  float: left;
+  width: 70%;
+  padding-left: 25px;
+}
+.row .posting-items .datetime {
+  float: right;
+  width: 30%;
+  padding-left: 25px;
+}
 
 /* Main 배너 반응형 디자인 */
 @media (max-width: 575.98px) {
@@ -229,6 +247,14 @@ header.bx-viewport {
 @media (max-width: 371px) {
   #copyright {
     width: 95vw;
+  }
+  .row .posting-items {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 325px) {
+  .row .posting-items {
+    font-size: 0.7em;
   }
 }
 @media (max-width: 991.98px) {
