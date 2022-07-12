@@ -65,6 +65,10 @@ app.post('/post', (req, res) => {
     res.redirect('/');
   })
 });
+// 로그인 페이지
+app.get('/signin', (req, res) => {
+  res.sendFile(__dirname + "/public/html/signin.html");
+});
 // 포트 지정 및 Listen
 const PORT = process.env.PORT || 3000
 app.listen(PORT);

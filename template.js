@@ -279,15 +279,6 @@ var template = {
                     </div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1251.6430600859487!2d127.07080568819624!3d37.19946580784012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b78fb0a7474be0b!2z7L2U65Sp656p7ZWZ7JuQ!5e0!3m2!1sen!2skr!4v1654011617658!5m2!1sen!2skr"
                         width="100%" height="500em" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="row" style="display: flex; justify-content: center;">
-                        <div href="#!" style="width: 95%; margin: 20px 10px; padding: 10px; border-bottom: 2px solid #ffdf6a; font-size: 1.2em; text-decoration: none;">
-                            주소
-                        </div>
-                        <div style="width: 95%; font-size: 1.2em;">
-                            경기도 화성시 동탄반석로 120<br>
-                            동탄 남광장 인근 제일프라자 8층
-                        </div>
-                    </div>
                 </div>
             </section>
             <!-- Footer -->
