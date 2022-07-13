@@ -200,6 +200,22 @@ header.bx-viewport {
 .note-statusbar {
   display: none;
 }
+.modal-dialog {
+  margin-top: 30vh !important;
+}
+.modal-content {
+  z-index: 100000 !important;
+}
+.modal-header {
+  justify-content: center !important;
+}
+.modal-header button.close {
+  display: none;
+}
+button.btn-fullscreen {
+  display: none;
+}
+
 
 /* Main 배너 반응형 디자인 */
 @media (max-width: 575.98px) {
@@ -292,7 +308,7 @@ header.bx-viewport {
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1200px) {
   .sub-image {
     opacity: 0.6;
   }
