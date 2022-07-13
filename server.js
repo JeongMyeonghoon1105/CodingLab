@@ -2,7 +2,6 @@ var express = require('express');
 var fs = require('fs');
 var app = express();
 var url = require('url');
-var qs = require('query-string');
 var mysql = require('mysql');
 var template = require('./template.js');
 

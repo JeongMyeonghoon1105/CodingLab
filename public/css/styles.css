@@ -82,9 +82,6 @@ header.bx-viewport {
   width: 100% !important;
   height: 60vh !important;
 }
-#gallery .gallery {
-  margin-top: 1.5rem;
-}
 .bx-wrapper {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;

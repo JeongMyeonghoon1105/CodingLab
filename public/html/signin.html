@@ -13,19 +13,79 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
     <link href="https://webfontworld.github.io/woowahan/BMHannaPro.css" rel="stylesheet">
-    <!-- CSS -->
-    <link href="css/styles.css" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: #f2f5fc;
+        position: relative;
+      }
+      .center {
+        width: 60vw;
+        height: 60vh;
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+        background-color: white;
+      }
+      #submit {
+        cursor: pointer;
+      }
+      #left-side {
+        float: left;
+        width: 30vw;
+        height: 60vh;
+        overflow: hidden;
+        position: relative;
+      }
+      #left-side img {
+        height: 100%;
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+      }
+      #right-side {
+        float: right;
+        width: 30vw;
+        height: 60vh;
+        font-weight: bold;
+        position: relative;
+      }
+      svg.svg-inline--fa {
+        text-align: center;
+        justify-content: center;
+      }
+      @media (max-width: 1300px) {
+        .container {
+          background-image: url("../assets/img/signin/signin.jpg");
+          opacity: 0.8;
+        }
+        .center {
+          opacity: 0.8;
+        }
+        #left-side {
+          display: none;
+        }
+        #right-side {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
 
   <body id="page-top">
-    <div style="width: 100vw; height: 100vh; background-color: #f2f5fc; position: relative;">
-      <div style="width: 60vw; height: 60vh; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background-color: white;">
-        <div style="float: left; width: 30vw; height: 60vh; overflow: hidden; position: relative;"><img src="../assets/img/signin/signin.jpg" style="height: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;"></div>
-        <div style="float: right; width: 30vw; height: 60vh; font-weight: bold; position: relative;">
+    <div class="container">
+      <div class="center">
+        <div id="left-side">
+          <img src="../assets/img/signin/signin.jpg">
+        </div>
+        <div id="right-side">
           <div style="width: 70%; height: 40%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;">
             <p style="font-size: 2em;">로그인</p>
-            <form method="post" action="/signin_process" style="display: flex; height: 20%;">
-              <input type="password" name="password" placeholder="비밀번호 입력" style="border: 1px solid lightgray; border-radius: 50px; width: 80%; height: 45px; padding-left: 20px;">
+            <form method="post" action="/signin_process" style="display: flex; height: 45px;">
+              <input type="password" name="password" placeholder="비밀번호 입력" style="border: 1px solid lightgray; border-radius: 50px; width: 80%; height: 41px; padding-left: 20px;">
               <button type="submit" id="submit" style="border: none; border-radius: 100%; background-color: #ffc800; color: white; width: 45px; height: 45px; margin-left: 10px; font-size: 1.5rem; font-weight: bold;">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
