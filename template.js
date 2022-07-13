@@ -16,6 +16,9 @@ var template = {
             <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
             <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
             <link href="https://webfontworld.github.io/woowahan/BMHannaPro.css" rel="stylesheet">
+            <style>
+              @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+            </style>
             <!-- CSS -->
             <link href="css/styles.css" rel="stylesheet">
             <!-- Image Slider -->
@@ -76,7 +79,8 @@ var template = {
                     <!-- <img class="slide-image" src="../assets/img/main/header-hakjong.png"> -->
                     <div class="slide-image" style="background-color: #FFA420;"></div>
                     <div class="main-title">
-                        <p style="text-shadow: 1px 1px 1px black;">SW 특기자 전형 준비반 운영</p>
+                        <p style="font-family: 'Staatliches', cursive;
+                        margin: 0;">SW 특기자 전형 준비반 운영</p>
                         코딩랩학원과 함께 생기부를 완성하세요
                     </div>
                     <img src="../assets/img/main/test.svg" class="sub-image" id="sw-image">
@@ -85,17 +89,11 @@ var template = {
                     <!-- <img class="slide-image" src="../assets/img/main/header-hakjong.png"> -->
                     <div class="slide-image" style="background-color: #5c23f9;"></div>
                     <div class="main-title">
-                        <p>UNITY 특강 오픈!</p>
+                        <p style="font-family: 'Staatliches', cursive;">UNITY 특강 오픈!</p>
                         게임 개발의 기초를 다져드립니다
                     </div>
                     <img src="../assets/img/main/game.svg" class="sub-image" id="unity-image">
                 </li>
-                <!--
-                <div class="container"> 
-                    <div class="masthead-heading text-uppercase">코딩랩학원</div>
-                    <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#Modal1">상담안내</a>
-                </div>
-                -->
             </div>
             <!-- 커리큘럼 -->
             <section class="page-section bg-light" id="curriculum">
