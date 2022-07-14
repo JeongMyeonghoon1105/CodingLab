@@ -1,5 +1,4 @@
 var express = require('express');
-var fs = require('fs');
 var app = express();
 var url = require('url');
 var mysql = require('mysql');
@@ -13,7 +12,8 @@ var db = mysql.createConnection({
 });
 db.connect();
 
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+const { summernote } = require('./template.js');
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({
   limit: '50mb',
@@ -33,11 +33,11 @@ app.get('/', (req, res) => {
       list = `<a href="/posting?id=${elem.id}" class="posting-items">
                 <div class="title">${elem.title}</div>
                 <div class="datetime">${elem.datetime}</div>
-            </a>` + list
+              </a>` + list
     });
-    var queryData = url.parse(req.url, true).query;
     var main = template.main(list);
-    res.send(main)
+    var render = template.basic(main);
+    res.send(render)
   })
 });
 // 게시물 작성 페이지
@@ -45,7 +45,9 @@ app.get('/write', (req, res) => {
   if (signin == 0) {
     res.redirect('/signin');
   } else {
-    res.sendFile(__dirname + "/public/html/writing.html");
+    var write = template.summernote();
+    var render = template.basic(write);
+    res.send(render)
   }
 });
 // 게시물 페이지
@@ -53,11 +55,12 @@ app.get('/posting', (req, res) => {
   var queryData = url.parse(req.url, true).query;
   db.query(`SELECT id, title, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
     if (err) throw err;
-    var render = template.top();
-    render = render + `<h1 style="font-size: 2.5rem; display: block; font-size: 2em; font-weight: bold;">${topics[0].title}</h1>`;
-    render = render + `<div style="width: 100%; height: 1px; margin: 50px 0; background-color: lightgray;"></div>`;
-    render = render + topics[0].content;
-    render = render + template.bottom();
+    var posting = template.top();
+    posting = posting + `<h1 style="font-size: 2.5rem; display: block; font-size: 2em; font-weight: bold;">${topics[0].title}</h1>`;
+    posting = posting + `<div style="width: 100%; height: 1px; margin: 50px 0; background-color: lightgray;"></div>`;
+    posting = posting + topics[0].content;
+    posting = posting + template.bottom();
+    render = template.basic(posting);
     res.send(render);
   })
 });

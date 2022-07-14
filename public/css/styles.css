@@ -307,10 +307,18 @@ button.btn-fullscreen {
 
 @media (max-width: 1200px) {
   .sub-image {
-    opacity: 0.6;
+    opacity: 0.8;
   }
+
+  #sw-image {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
   .main-slide #sw-image {
-    opacity: 0.2;
+    width: 400px;
+    height: 400px;
   }
 }
 
