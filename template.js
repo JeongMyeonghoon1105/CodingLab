@@ -134,10 +134,7 @@ var template = {
           <!-- 스크래치 커리큘럼 -->
           <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
             <div class="portfolio-item">
-              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                </div>
+              <a class="portfolio-link">
                 <img class="img-fluid" src="assets/img/curriculum/Scratch.png" alt="..." />
               </a>
               <div class="portfolio-caption">
@@ -149,10 +146,7 @@ var template = {
           <!-- 프로그래밍 언어 커리큘럼 -->
           <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
             <div class="portfolio-item">
-              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                </div>
+              <a class="portfolio-link">
                 <img class="img-fluid" src="assets/img/curriculum/Languages.png" alt="..." />
               </a>
               <div class="portfolio-caption">
@@ -164,10 +158,7 @@ var template = {
           <!-- 피지컬 컴퓨팅 -->
           <div class="col-lg-4 col-sm-6">
             <div class="portfolio-item">
-              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                </div>
+              <a class="portfolio-link">
                 <img class="img-fluid" src="assets/img/curriculum/Robot.png" alt="..." />
               </a>
               <div class="portfolio-caption">
@@ -179,10 +170,7 @@ var template = {
           <!-- AI 커리큘럼 -->
           <div class="col-lg-4 col-sm-6 mb-4">
             <div class="portfolio-item">
-              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                </div>
+              <a class="portfolio-link">
                 <img class="img-fluid" src="assets/img/curriculum/AI.png" alt="..." />
               </a>
               <div class="portfolio-caption">
@@ -194,10 +182,7 @@ var template = {
           <!-- 웹 & 앱 개발 커리큘럼 -->
           <div class="col-lg-4 col-sm-6 mb-4">
             <div class="portfolio-item">
-              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                </div>
+              <a class="portfolio-link">
                 <img class="img-fluid" src="assets/img/curriculum/Web.png" alt="..." />
               </a>
               <div class="portfolio-caption">
@@ -209,10 +194,7 @@ var template = {
           <!-- 게임 개발 커리큘럼 -->
           <div class="col-lg-4 col-sm-6 mb-4">
             <div class="portfolio-item">
-              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                </div>
+              <a class="portfolio-link">
                 <img class="img-fluid" src="assets/img/curriculum/Unity.jpg" alt="..." />
               </a>
               <div class="portfolio-caption">
