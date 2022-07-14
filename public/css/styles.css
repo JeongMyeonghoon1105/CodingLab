@@ -151,7 +151,7 @@ header.bx-viewport {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 17%;
+  right: 15%;
   margin: auto;
 }
 .main-slide #big-sub-image {
@@ -323,11 +323,11 @@ button.btn-fullscreen {
 }
 
 @media (max-width: 1593px) {
+}
+@media (max-width: 1750px) {
   .main-slide #dimigo-image {
     opacity: 0.2;
   }
-}
-@media (max-width: 1630px) {
 }
 @media (max-width: 1855px) {
   .main-slide .sub-image {

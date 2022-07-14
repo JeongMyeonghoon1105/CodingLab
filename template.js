@@ -108,18 +108,18 @@ var template = {
         <img src="../assets/img/main/school.svg" class="sub-image" id="dimigo-image">
       </li>
       <li class="main-slide">
-        <div class="slide-image" style="background-color: #FFA420;"></div>
-        <div class="main-title">
+        <div class="slide-image" style="background-color: rgb(255, 248, 233);"></div>
+        <div class="main-title" style="color: gray;">
           <p style="font-family: 'Staatliches', cursive; margin: 0;">SW 특기자 전형 준비반 운영</p>
           코딩랩학원과 함께 생기부를 완성하세요
         </div>
-        <img src="../assets/img/main/test.svg" class="sub-image" id="sw-image">
+        <img src="../assets/img/main/school.png" class="sub-image" id="dimigo-image">
       </li>
       <li class="main-slide">
         <div class="slide-image" style="background-color: #5c23f9;"></div>
         <div class="main-title">
-          <p style="font-family: 'Staatliches', cursive;">UNITY 특강 오픈!</p>
-          게임 개발의 기초를 다져드립니다
+          <p style="font-family: 'Staatliches', cursive;">UNITY 특강 운영!</p>
+          게임 개발에 도전하세요
         </div>
         <img src="../assets/img/main/game.svg" class="sub-image" id="unity-image">
       </li>
