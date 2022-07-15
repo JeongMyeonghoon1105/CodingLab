@@ -28,7 +28,7 @@ var template = {
         <script>
           $(document).ready(function(){
             $('.slider').bxSlider({
-              auto: false,
+              auto: true,
             });
             $('.gallery').bxSlider({
               auto: false,
@@ -91,6 +91,9 @@ var template = {
   },
   main : (list) => {
     return `
+    <link rel="stylesheet" href="css/carousel.css" />
+    <script src="js/carousel.js"></script>
+
     <!-- 메인 이미지 슬라이더 -->
     <div class="slider" style="position: relative;">
       <li class="main-slide">
@@ -212,13 +215,17 @@ var template = {
         <div class="text-center">
           <h2 class="section-heading text-uppercase">갤러리</h2><br>
         </div>
+
         <!-- 이미지 슬라이더 -->
         <div class="gallery">
           <img src="assets/img/gallery/01.jpeg">
-          <img src="assets/img/gallery/03.jpg">
+          <img src="assets/img/gallery/02.jpeg">
+          <img src="assets/img/gallery/03.jpeg">
           <img src="assets/img/gallery/04.jpg">
           <img src="assets/img/gallery/05.jpg">
+          <img src="assets/img/gallery/06.jpg">
         </div>
+
       </div>
     </section>
     <!-- 상담안내 -->
