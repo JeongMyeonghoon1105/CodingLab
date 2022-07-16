@@ -7,8 +7,8 @@ var template = require('./template.js');
 var db = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'audgns9809',
-  database : 'codinglab'
+  password : '비밀번호',
+  database : '데이터베이스명'
 });
 db.connect();
 
