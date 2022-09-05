@@ -6,8 +6,8 @@ var template = require('./template.js');
 
 var db = mysql.createConnection({
   host     : 'localhost',
-  user     : 'root',
-  password : 'audgns9809',
+  user     : 'codinglab',
+  password : '!Codinglab1122@',
   database : 'codinglab'
 });
 db.connect();
@@ -42,13 +42,9 @@ app.get('/', (req, res) => {
 });
 // 게시물 작성 페이지
 app.get('/write', (req, res) => {
-  if (signin == 0) {
-    res.redirect('/signin');
-  } else {
     var write = template.summernote();
     var render = template.basic(write);
     res.send(render)
-  }
 });
 // 게시물 페이지
 app.get('/posting', (req, res) => {
@@ -75,7 +71,7 @@ app.post('/post', (req, res) => {
   })
 });
 // 로그인 페이지
-app.get('/signin', (req, res) => {
+app.get('http://xn--2q1byy48co33bttb.com/signin', (req, res) => {
   if (signin == 0){
     res.sendFile(__dirname + "/public/html/signin.html");
   } else {
@@ -96,7 +92,7 @@ app.post('/signin_process', (req, res) => {
   })
 });
 // 포트 지정 및 Listen
-const PORT = process.env.PORT || 3000
+const PORT = 3000
 app.listen(PORT);
 
 // $ npm install query-string

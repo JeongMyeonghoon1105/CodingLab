@@ -21,7 +21,7 @@ var template = {
         </style>
         <!-- CSS -->
         <link href="css/styles.css" rel="stylesheet">
-        <!-- Image Slider -->
+	<!-- Image Slider -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -108,12 +108,12 @@ var template = {
           <p>디지털미디어고 준비반 운영</p>
           꾸준한 합격 성과의 디미고 대비 특별 수업과 함께하세요
         </div>
-        <img src="../assets/img/main/school.svg" class="sub-image" id="dimigo-image">
+        <img src="../assets/img/main/school.svg" class="sub-image" id="dimigo-image" style="opacity: 0.3;">
       </li>
       <li class="main-slide">
         <div class="slide-image" style="background-color: rgb(255, 248, 233);"></div>
         <div class="main-title" style="color: #54544e;">
-          <p style="font-family: 'Staatliches', cursive; margin: 0;">SW 특기자 전형 준비반 운영</p>
+          <p style="font-family: 'Staatliches', 'Arial'; margin: 0;">SW 특기자 전형 준비반 운영</p>
           코딩랩학원과 함께 생기부를 완성하세요
         </div>
         <img src="../assets/img/main/school.png" class="sub-image" id="dimigo-image">
@@ -121,7 +121,7 @@ var template = {
       <li class="main-slide">
         <div class="slide-image" style="background-color: #5c23f9;"></div>
         <div class="main-title">
-          <p style="font-family: 'Staatliches', cursive;">UNITY 특강 운영!</p>
+          <p style="font-family: 'Staatliches', 'Arial';">UNITY 특강 운영!</p>
           게임 개발에 도전하세요
         </div>
         <img src="../assets/img/main/game.svg" class="sub-image" id="unity-image">
