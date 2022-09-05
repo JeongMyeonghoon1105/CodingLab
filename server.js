@@ -6,14 +6,14 @@ var template = require('./template.js');
 
 var db = mysql.createConnection({
   host     : 'localhost',
-  user     : '사용자 이름',
-  password : 'MySQL 비밀번호',
-  database : '데이터베이스명'
+  user     : '',
+  password : '',
+  database : '',
+  // multipleStatements : true
 });
 db.connect();
 
 var bodyParser = require('body-parser');
-const { summernote } = require('./template.js');
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({
   limit: '50mb',
@@ -23,7 +23,7 @@ app.use(express.static('public'));
 
 var signin = 0;
 
-// 메인 페이지
+// Main Page
 app.get('/', (req, res) => {
   signin = 0;
   db.query(`SELECT id, title, DATE_FORMAT(datetime, '%y-%m-%d') AS datetime FROM post`, (err, topics) => {
@@ -37,16 +37,34 @@ app.get('/', (req, res) => {
     });
     var main = template.main(list);
     var render = template.basic(main);
-    res.send(render)
+    /*
+    db.query(`SELECT content FROM popup`, (err, topic) => {
+      console.log('1');
+      if (err) throw err;
+      topic.forEach((element) => {
+        console.log('2');
+        window.open(element, "1st PopUp", "width=400, height=500, left=100, top=50");
+      })
+      console.log('3');
+      res.send(render)
+    })
+    */
+   res.send(render)
   })
 });
-// 게시물 작성 페이지
+// Post Writing Page
 app.get('/write', (req, res) => {
-    var write = template.summernote();
+    var write = template.write();
     var render = template.basic(write);
     res.send(render)
 });
-// 게시물 페이지
+// Pop Up Writing Page
+app.get('/popup', (req, res) => {
+  var popup = template.popup();
+  var render = template.basic(popup);
+  res.send(render)
+});
+// Posting Page
 app.get('/posting', (req, res) => {
   var queryData = url.parse(req.url, true).query;
   db.query(`SELECT id, title, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
@@ -60,7 +78,7 @@ app.get('/posting', (req, res) => {
     res.send(render);
   })
 });
-// 게시물 업로딩 프로세스
+// Post Uploading Process
 app.post('/post', (req, res) => {
   var title = req.body.title;
   var content = req.body.editordata;
@@ -70,24 +88,24 @@ app.post('/post', (req, res) => {
     res.redirect('/');
   })
 });
-// Pop Up
-app.post('/popup', (req, res) => {
+// Pop Up Uploading Process
+app.post('/popup_process', (req, res) => {
   var content = req.body.editordata;
 
-  db.query(`INSERT INTO post(content) VALUES (?)`, [content], (err, topics) => {
+  db.query(`INSERT INTO popup(content) VALUES (?)`, [content], (err, topics) => {
     if (err) throw err;
     res.redirect('/');
   })
 });
-// 로그인 페이지
-app.get('http://xn--2q1byy48co33bttb.com/signin', (req, res) => {
+// Sign In Page
+app.get('/signin', (req, res) => {
   if (signin == 0){
     res.sendFile(__dirname + "/public/html/signin.html");
   } else {
     res.redirect('/');
   }
 });
-// 로그인 프로세스
+// Sign In Process
 app.post('/signin_process', (req, res) => {
   db.query(`SELECT pw FROM pw WHERE id=1`, (err, topics) => {
     if (err) throw err;
@@ -100,7 +118,7 @@ app.post('/signin_process', (req, res) => {
     }
   })
 });
-// 포트 지정 및 Listen
+// Set Port
 const PORT = 3000
 app.listen(PORT);
 

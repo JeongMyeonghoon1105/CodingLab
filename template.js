@@ -22,7 +22,7 @@ var template = {
         </style>
         <!-- CSS -->
         <link href="css/styles.css" rel="stylesheet">
-	<!-- Image Slider -->
+	      <!-- Image Slider -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -37,8 +37,7 @@ var template = {
           });
         </script>
       </head>
-      <!--<body id="page-top" onload="popup()">-->
-      <body id="page-top">
+      <body id="page-top" onload="popup()">
         <!-- Header -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
           <div class="container">
@@ -303,7 +302,7 @@ var template = {
     </section>
     `
   },
-  summernote : () => {
+  write : () => {
     return `
     <!--Summernote-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -317,6 +316,33 @@ var template = {
         <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
         <form method="post" action="/post">
           <input type="text" id="posting-title" name="title" placeholder="제목" style="width: 100%; height: 50px; margin-bottom: 10px; font-size: 1.5em; border-radius: 5px; border: 1px solid lightgray; padding-left: 10px;">
+          <textarea id="summernote" name="editordata"></textarea>
+          <div>
+            <p style="text-align: center; font-size: 1.2em;"><input type="submit" id="submit" style="border: none; border-radius: 50px; background-color: #ffc800; color: white; width: 10vw; height: 5vh;"></p>
+          </div>
+        </form>
+        <script>
+          $(document).ready(() => {
+            $('#summernote').summernote();
+          });
+        </script>
+      </div>
+    </div>
+    `
+  },
+  popup : () => {
+    return `
+    <!--Summernote-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+      <div class="container" style="min-height: 100vh;">
+        <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
+        <form method="post" action="/popup_process">
           <textarea id="summernote" name="editordata"></textarea>
           <div>
             <p style="text-align: center; font-size: 1.2em;"><input type="submit" id="submit" style="border: none; border-radius: 50px; background-color: #ffc800; color: white; width: 10vw; height: 5vh;"></p>
