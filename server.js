@@ -9,6 +9,9 @@ var db = mysql.createConnection({
   user     : 'codinglab',
   password : '!Codinglab1122@',
   database : 'codinglab'
+  user     : 'root',
+  password : '비밀번호',
+  database : '데이터베이스명'
 });
 db.connect();
 
