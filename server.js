@@ -70,6 +70,15 @@ app.post('/post', (req, res) => {
     res.redirect('/');
   })
 });
+// Pop Up
+app.post('/popup', (req, res) => {
+  var content = req.body.editordata;
+
+  db.query(`INSERT INTO post(content) VALUES (?)`, [content], (err, topics) => {
+    if (err) throw err;
+    res.redirect('/');
+  })
+});
 // 로그인 페이지
 app.get('http://xn--2q1byy48co33bttb.com/signin', (req, res) => {
   if (signin == 0){

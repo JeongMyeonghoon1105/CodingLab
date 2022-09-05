@@ -36,6 +36,7 @@ var template = {
           });
         </script>
       </head>
+      <!--<body id="page-top" onload="popup()">-->
       <body id="page-top">
         <!-- Header -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
