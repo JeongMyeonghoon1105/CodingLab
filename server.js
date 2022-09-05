@@ -3,12 +3,13 @@ var app = express();
 var url = require('url');
 var mysql = require('mysql');
 var template = require('./template.js');
+// const open = require('open');
 
 var db = mysql.createConnection({
   host     : 'localhost',
-  user     : '',
-  password : '',
-  database : '',
+  user     : 'root',
+  password : 'audgns9809',
+  database : 'codinglab',
   // multipleStatements : true
 });
 db.connect();
@@ -25,6 +26,7 @@ var signin = 0;
 
 // Main Page
 app.get('/', (req, res) => {
+  // open('https://github.com/JeongMyeonghoon1105/Images/blob/main/Robot.png?raw=true')
   signin = 0;
   db.query(`SELECT id, title, DATE_FORMAT(datetime, '%y-%m-%d') AS datetime FROM post`, (err, topics) => {
     var list = `<br>`;
@@ -37,19 +39,16 @@ app.get('/', (req, res) => {
     });
     var main = template.main(list);
     var render = template.basic(main);
-    /*
+    
     db.query(`SELECT content FROM popup`, (err, topic) => {
-      console.log('1');
       if (err) throw err;
       topic.forEach((element) => {
-        console.log('2');
-        window.open(element, "1st PopUp", "width=400, height=500, left=100, top=50");
+        // window.open(element, "1st PopUp", "width=400, height=500, left=100, top=50");
       })
-      console.log('3');
       res.send(render)
     })
-    */
-   res.send(render)
+    
+    // res.send(render)
   })
 });
 // Post Writing Page
@@ -125,3 +124,4 @@ app.listen(PORT);
 // $ npm install query-string
 // $ npm install mysql
 // $ npm install --save body-parser
+// $ npm install open
