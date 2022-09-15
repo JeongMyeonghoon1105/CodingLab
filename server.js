@@ -3,7 +3,10 @@ var app = express();
 var url = require('url');
 var mysql = require('mysql');
 var template = require('./template.js');
+const popup = require('node-popup');
 // const open = require('open');
+
+// import {alert} from 'node-popup';
 
 var db = mysql.createConnection({
   host     : 'localhost',
@@ -39,16 +42,18 @@ app.get('/', (req, res) => {
     });
     var main = template.main(list);
     var render = template.basic(main);
-    
+
+    /*
     db.query(`SELECT content FROM popup`, (err, topic) => {
       if (err) throw err;
       topic.forEach((element) => {
+        // alert('hello world');
         // window.open(element, "1st PopUp", "width=400, height=500, left=100, top=50");
       })
       res.send(render)
     })
-    
-    // res.send(render)
+    */
+    res.send(render)
   })
 });
 // Post Writing Page
@@ -125,3 +130,4 @@ app.listen(PORT);
 // $ npm install mysql
 // $ npm install --save body-parser
 // $ npm install open
+// $ npm install node-popup
