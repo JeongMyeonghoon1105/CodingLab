@@ -79,33 +79,34 @@ var template = {
         </footer>
 
         <!-- Portfolio item 1 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="top: 10px !important; margin-top: 10px !important;">
+          <div class="modal-dialog" style="top: 10px !important; margin-top: 10px !important;">
+            <div class="modal-content" style="top: 10px !important; margin-top: 10px !important;">
+              <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/icons/close-icon.svg" alt="Close modal" /></div>
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-lg-8">
-                    <div class="modal-body">
+                    <div class="modal-body" style="text-align: justify">
                       <!-- Project details-->
-                      <h2 class="text-uppercase">Project Name</h2>
-                      <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                      <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                      <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                      <ul class="list-inline">
-                        <li>
-                          <strong>Client:</strong>
-                          Threads
-                        </li>
-                        <li>
-                          <strong>Category:</strong>
-                          Illustration
-                        </li>
-                      </ul>
-                      <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                        <i class="fas fa-xmark me-1"></i>
-                        Close Project
-                      </button>
+                      <h2 class="text-uppercase" style="text-align: center">블럭코딩 커리큘럼</h2><br><br>
+                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/Scratch2.png" alt="..." />
+                      <p style="font-size: 1.3em; font-weight: bold">1. 스크래치</p>
+                      스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블록을 통해 컴퓨팅적 사고를 연습하며, 코딩의 기초를 연습합니다.
+                      <br><br><br><br>
+                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/hamster.jpg" alt="..." />
+                      <p style="font-size: 1.3em; font-weight: bold">2. 햄스터 로봇</p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      <br><br><br><br>
+                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/tinkercad.png" alt="..." />
+                      <p style="font-size: 1.3em; font-weight: bold">3. 틴커캐드를 활용한 아두이노 블럭코딩</p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      <br><br><br><br>
+                      <div style="text-align: center">
+                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                          <i class="fas fa-xmark me-1"></i>
+                          Close
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
