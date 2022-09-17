@@ -93,7 +93,7 @@ var template = {
                       <p style="font-size: 1.3em; font-weight: bold">1. 스크래치</p>
                       스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블록코딩을 통해 컴퓨팅적 사고를 연습합니다. 제어문, 반복문, 변수, 함수 등 코딩의 기초를 익힐 수 있습니다.
                       <br><br><br><br>
-                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/app.jpg" alt="..." />
+                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/app.png" alt="..." />
                       <p style="font-size: 1.3em; font-weight: bold">2. 앱 인벤터</p>
                       앱 인벤터를 활용하면 블럭코딩으로 간단한 휴대폰 애플리케이션을 개발할 수 있습니다. 코딩의 실용성을 체감하고, 앱 개발 경험을 쌓는 유익한 시간이 될 것입니다.
                       <br><br><br><br>
