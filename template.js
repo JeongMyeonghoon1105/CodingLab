@@ -1,5 +1,5 @@
 var template = {
-  basic : (content) => {
+  basic: (content) => {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -91,15 +91,19 @@ var template = {
                       <h2 class="text-uppercase" style="text-align: center">블럭코딩 커리큘럼</h2><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/Scratch2.png" alt="..." />
                       <p style="font-size: 1.3em; font-weight: bold">1. 스크래치</p>
-                      스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블록을 통해 컴퓨팅적 사고를 연습하며, 코딩의 기초를 연습합니다.
+                      스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블록코딩을 통해 컴퓨팅적 사고를 연습합니다. 제어문, 반복문, 변수, 함수 등 코딩의 기초를 익힐 수 있습니다.
+                      <br><br><br><br>
+                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/app.jpg" alt="..." />
+                      <p style="font-size: 1.3em; font-weight: bold">2. 앱 인벤터</p>
+                      앱 인벤터를 활용하면 블럭코딩으로 간단한 휴대폰 애플리케이션을 개발할 수 있습니다. 코딩의 실용성을 체감하고, 앱 개발 경험을 쌓는 유익한 시간이 될 것입니다.
                       <br><br><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/hamster.jpg" alt="..." />
-                      <p style="font-size: 1.3em; font-weight: bold">2. 햄스터 로봇</p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      <p style="font-size: 1.3em; font-weight: bold">3. 햄스터 로봇</p>
+                      햄스터 로봇은 다양한 센서를 활용할 수 있는 소프트웨어 교육용 로봇입니다. 블록 코딩을 이용하여 햄스터 로봇을 제어하며 피지컬 컴퓨팅의 기초를 다질 수 있습니다.
                       <br><br><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/tinkercad.png" alt="..." />
-                      <p style="font-size: 1.3em; font-weight: bold">3. 틴커캐드를 활용한 아두이노 블럭코딩</p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      <p style="font-size: 1.3em; font-weight: bold">4. 틴커캐드</p>
+                      틴커캐드를 활용하여 블럭코딩으로 피지컬 컴퓨팅을 배울 수 있습니다. C 언어를 몰라도 아두이노를 배울 수 있다는 점은 틴커캐드의 큰 장점 중 하나입니다. 틴커캐드 웹사이트는 전자 회로의 설계 및 작동을 시뮬레이션하는 기능을 제공합니다. 이를 활용하여 아두이노와 같은 마이크로컨트롤러와 모터, 센서, LED 등의 기계장치를 연결하는 전자 회로를 구성하고 블럭코딩으로 이를 제어할 수 있습니다.
                       <br><br><br><br>
                       <div style="text-align: center">
                         <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -125,9 +129,9 @@ var template = {
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       </body>
     </html>
-    `
+    `;
   },
-  main : (list) => {
+  main: (list) => {
     return `
     <link rel="stylesheet" href="css/carousel.css" />
     <script src="js/carousel.js"></script>
@@ -340,9 +344,9 @@ var template = {
             width="100%" height="500em" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
-    `
+    `;
   },
-  write : () => {
+  write: () => {
     return `
     <!--Summernote-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -368,9 +372,9 @@ var template = {
         </script>
       </div>
     </div>
-    `
+    `;
   },
-  popup : () => {
+  popup: () => {
     return `
     <!--Summernote-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -395,20 +399,20 @@ var template = {
         </script>
       </div>
     </div>
-    `
+    `;
   },
-  top : () => {
+  top: () => {
     return `
     <div style="width: 100vw; min-height: 100vh; margin: 0; background-color: #f6f9fd">
       <div class="container" style="background-color: white; margin-top: 4.5rem; padding: 4rem; min-height: 100vh;" id="posting-container">
-    `
+    `;
   },
-  bottom : () => {
+  bottom: () => {
     return `
       </div>
     </div>
-    `
-  }
-}
+    `;
+  },
+};
 
 module.exports = template;
