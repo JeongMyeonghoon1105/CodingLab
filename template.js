@@ -89,7 +89,7 @@ var template = {
                     <div class="modal-body" style="text-align: justify">
                       <!-- Project details-->
                       <h2 class="text-uppercase" style="text-align: center">블럭코딩 커리큘럼</h2><br><br>
-                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/Scratch2.png" alt="..." />
+                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/scratch3.png" alt="..." />
                       <p style="font-size: 1.3em; font-weight: bold">1. 스크래치</p>
                       스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블록코딩을 통해 컴퓨팅적 사고를 연습합니다. 제어문, 반복문, 변수, 함수 등 코딩의 기초를 익힐 수 있습니다.
                       <br><br><br><br>
