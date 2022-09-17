@@ -91,7 +91,7 @@ var template = {
                       <h2 class="text-uppercase" style="text-align: center">블럭코딩 커리큘럼</h2><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/scratch3.png" alt="..." />
                       <p style="font-size: 1.3em; font-weight: bold">1. 스크래치</p>
-                      스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블록코딩을 통해 컴퓨팅적 사고를 연습합니다. 제어문, 반복문, 변수, 함수 등 코딩의 기초를 익힐 수 있습니다.
+                      스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블럭코딩을 통해 컴퓨팅적 사고를 연습합니다. 제어문, 반복문, 변수, 함수 등 코딩의 기초를 익힐 수 있습니다.
                       <br><br><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/app.png" alt="..." />
                       <p style="font-size: 1.3em; font-weight: bold">2. 앱 인벤터</p>
@@ -99,7 +99,7 @@ var template = {
                       <br><br><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/hamster.jpg" alt="..." />
                       <p style="font-size: 1.3em; font-weight: bold">3. 햄스터 로봇</p>
-                      햄스터 로봇은 다양한 센서를 활용할 수 있는 소프트웨어 교육용 로봇입니다. 블록 코딩을 이용하여 햄스터 로봇을 제어하며 피지컬 컴퓨팅의 기초를 다질 수 있습니다.
+                      햄스터 로봇은 다양한 센서를 활용할 수 있는 소프트웨어 교육용 로봇입니다. 블럭 코딩을 이용하여 햄스터 로봇을 제어하며 피지컬 컴퓨팅의 기초를 다질 수 있습니다.
                       <br><br><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/tinkercad.png" alt="..." />
                       <p style="font-size: 1.3em; font-weight: bold">4. 틴커캐드</p>
