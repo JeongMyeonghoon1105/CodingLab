@@ -1,10 +1,10 @@
-# This Repo is source of Coding Lab Software Class Website
+# Coding Lab Software Class Website
 
 > http://동탄코딩랩.com
 
 ## Frontend
 * SB ADMIN Template
-* JQuery
+* jQuery
 
 ## Backend
 * Node.js
