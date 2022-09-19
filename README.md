@@ -3,7 +3,7 @@
 > http://동탄코딩랩.com
 
 ## Frontend
-* SB ADMIN Template
+* SB Admin Template
 * jQuery
 
 ## Backend
