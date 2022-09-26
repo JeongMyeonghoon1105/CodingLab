@@ -1,4 +1,4 @@
-# Coding Lab Software Class Website
+# CodingLab Software Class Website
 
 > http://동탄코딩랩.com
 
