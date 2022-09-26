@@ -7,7 +7,7 @@
 * jQuery
 
 ## Backend
-* Node.js
+* Node.js express
 * MySQL
 * Ubuntu Server
 
