@@ -63,7 +63,7 @@ app.get('/write', (req, res) => {
     res.send(render)
 });
 // Posting Page
-app.get('http://218.155.103.133/posting', (req, res) => {
+app.get('/posting', (req, res) => {
   var queryData = url.parse(req.url, true).query;
   db.query(`SELECT id, title, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
     if (err) throw err;
