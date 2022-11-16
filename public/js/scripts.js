@@ -1,8 +1,6 @@
-/*
 function popup() {
-    window.open("html/popup.html", "1st PopUp", "width=400, height=500, left=100, top=50");
+    window.open("https://raw.githubusercontent.com/JeongMyeonghoon1105/Images/main/image.png", "1st PopUp", "width=400, height=500, left=100, top=50");
 }
-*/
 
 window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
