@@ -78,7 +78,7 @@ app.get('http://218.155.103.133/posting', (req, res) => {
     posting = posting + `<div style="width: 100%; height: 1px; margin: 50px 0; background-color: lightgray;"></div>`;
     posting = posting + topics[0].content;
     posting = posting + template.bottom();
-    render = template.basic(posting);
+    render = template.basic2(posting);
     res.send(render);
   })
 });
