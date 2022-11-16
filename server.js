@@ -59,14 +59,8 @@ app.get('/', (req, res) => {
 // Post Writing Page
 app.get('/write', (req, res) => {
     var write = template.write();
-    var render = template.basic(write);
+    var render = template.basic2(write);
     res.send(render)
-});
-// Pop Up Writing Page
-app.get('/popup', (req, res) => {
-  var popup = template.popup();
-  var render = template.basic(popup);
-  res.send(render)
 });
 // Posting Page
 app.get('http://218.155.103.133/posting', (req, res) => {
@@ -92,36 +86,27 @@ app.post('/post', (req, res) => {
     res.redirect('/');
   })
 });
-// Pop Up Uploading Process
-app.post('/popup_process', (req, res) => {
-  var content = req.body.editordata;
-
-  db.query(`INSERT INTO popup(content) VALUES (?)`, [content], (err, topics) => {
-    if (err) throw err;
-    res.redirect('/');
-  })
-});
 // Sign In Page
-app.get('/signin', (req, res) => {
-  if (signin == 0){
-    res.sendFile(__dirname + "/public/html/signin.html");
-  } else {
-    res.redirect('/');
-  }
-});
+// app.get('/signin', (req, res) => {
+//   if (signin == 0){
+//     res.sendFile(__dirname + "/public/html/signin.html");
+//   } else {
+//     res.redirect('/');
+//   }
+// });
 // Sign In Process
-app.post('/signin_process', (req, res) => {
-  db.query(`SELECT pw FROM pw WHERE id=1`, (err, topics) => {
-    if (err) throw err;
-    var password = req.body.password;
-    if (topics[0].pw == password) {
-      signin = 1;
-      res.redirect('/write');
-    } else {
-      res.redirect('/signin');
-    }
-  })
-});
+// app.post('/signin_process', (req, res) => {
+//   db.query(`SELECT pw FROM pw WHERE id=1`, (err, topics) => {
+//     if (err) throw err;
+//     var password = req.body.password;
+//     if (topics[0].pw == password) {
+//       signin = 1;
+//       res.redirect('/write');
+//     } else {
+//       res.redirect('/signin');
+//     }
+//   })
+// });
 // Set Port
 const PORT = 3000
 app.listen(PORT);
