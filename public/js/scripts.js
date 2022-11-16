@@ -1,5 +1,5 @@
 function popup() {
-    window.open("https://popup-codinglab.herokuapp.com/", "1st PopUp", "width=400, height=566, left=100, top=50");
+    window.open("https://popup-codinglab.herokuapp.com/", "1st PopUp", "width=400, height=600, left=100, top=50");
 }
 
 window.addEventListener('DOMContentLoaded', event => {
