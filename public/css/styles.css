@@ -164,6 +164,21 @@ header.bx-viewport {
   height: 300px;
   right: 22%;
 }
+#footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+#footer-inner {
+  color: white;
+  float: left;
+  display: flex;
+  width: 80vw;
+}
+#footer-title {
+  color: #ffc800;
+  font-weight: bold;
+  letter-spacing: 0.0625em;
+}
 #footer-text {
   width: 70%;
   margin-left: 50px;
@@ -216,6 +231,14 @@ header.bx-viewport {
 }
 button.btn-fullscreen {
   display: none;
+}
+#portfolioModal1, #modal-dialog, #modal-content {
+  top: 10px !important;
+  margin-top: 10px !important;
+}
+.portfolio-text {
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 

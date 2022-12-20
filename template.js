@@ -64,10 +64,10 @@ var template = {
         <!-- Footer -->
         <footer class="footer py-4" style="background-color: #212529;">
           <div class="container">
-            <div class="row align-items-center" style="display: flex; justify-content: space-between;">
-              <div class="col-lg-4 text-lg-start" style="color: white; float: left; display: flex; width: 80vw">
+            <div class="row align-items-center" id="footer-container">
+              <div class="col-lg-4 text-lg-start" id="footer-inner">
                 <div class="navbar-brand" id="footer-logo">
-                  <text style="color: #ffc800; font-weight: bold; letter-spacing: 0.0625em;">CODING LAB</text>
+                  <text id="footer-title">CODING LAB</text>
                 </div>
                 <div id="footer-text">
                   <text id="footer-adress">경기도 화성시 동탄반석로 120, 제일프라자 8층<br></text>
@@ -78,10 +78,12 @@ var template = {
           </div>
         </footer>
         <!-- Scratch Curriculum Modal -->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="top: 10px !important; margin-top: 10px !important;">
-          <div class="modal-dialog" style="top: 10px !important; margin-top: 10px !important;">
-            <div class="modal-content" style="top: 10px !important; margin-top: 10px !important;">
-              <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/icons/close-icon.svg" alt="Close modal" /></div>
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" id="modal-dialog">
+            <div class="modal-content" id="modal-content">
+              <div class="close-modal" data-bs-dismiss="modal">
+                <img src="assets/img/icons/close-icon.svg" alt="Close modal"/>
+              </div>
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-lg-8">
@@ -89,19 +91,19 @@ var template = {
                       <!-- Project details-->
                       <h2 class="text-uppercase" style="text-align: center">블럭코딩 커리큘럼</h2><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/scratch3.png" alt="..." />
-                      <p style="font-size: 1.3em; font-weight: bold">1. 스크래치</p>
+                      <p class="portfolio-text">1. 스크래치</p>
                       스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블럭코딩을 통해 컴퓨팅적 사고를 연습합니다. 제어문, 반복문, 변수, 함수 등 코딩의 기초를 익힐 수 있습니다.
                       <br><br><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/app.png" alt="..." />
-                      <p style="font-size: 1.3em; font-weight: bold">2. 앱 인벤터</p>
+                      <p class="portfolio-text">2. 앱 인벤터</p>
                       앱 인벤터를 활용하면 블럭코딩으로 간단한 휴대폰 애플리케이션을 개발할 수 있습니다. 코딩의 실용성을 체감하고, 앱 개발 경험을 쌓는 유익한 시간이 될 것입니다.
                       <br><br><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/hamster.jpg" alt="..." />
-                      <p style="font-size: 1.3em; font-weight: bold">3. 햄스터 로봇</p>
+                      <pclass="portfolio-text">3. 햄스터 로봇</pclass=>
                       햄스터 로봇은 다양한 센서를 활용할 수 있는 소프트웨어 교육용 로봇입니다. 블럭 코딩을 이용하여 햄스터 로봇을 제어하며 피지컬 컴퓨팅의 기초를 다질 수 있습니다.
                       <br><br><br><br>
                       <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/tinkercad.png" alt="..." />
-                      <p style="font-size: 1.3em; font-weight: bold">4. 틴커캐드</p>
+                      <pclass="portfolio-text">4. 틴커캐드</pclass=>
                       틴커캐드를 활용하여 블럭코딩으로 피지컬 컴퓨팅을 배울 수 있습니다. C 언어를 몰라도 아두이노를 배울 수 있다는 점은 틴커캐드의 큰 장점 중 하나입니다. 틴커캐드 웹사이트는 전자 회로의 설계 및 작동을 시뮬레이션하는 기능을 제공합니다. 이를 활용하여 아두이노와 같은 마이크로컨트롤러와 모터, 센서, LED 등의 기계장치를 연결하는 전자 회로를 구성하고 블럭코딩으로 이를 제어할 수 있습니다.
                       <br><br><br><br>
                       <div style="text-align: center">
