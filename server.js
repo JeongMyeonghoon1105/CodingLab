@@ -11,7 +11,7 @@ const popup = require('node-popup');
 var db = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '!Codinglab1122@',
+  password : 'audgns9809',
   database : 'codinglab',
   // multipleStatements : true
 });
