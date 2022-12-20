@@ -120,10 +120,10 @@ var template = {
         </div>
         
         <!- 디미고 합격 성과 Modal -->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="top: 10px !important; margin-top: 10px !important; width: 500px !important; height: 750px !important; margin: 0; padding: 0; overflow: hidden;">
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="top: 50px !important; margin-top: 10px !important; width: 500px !important; height: 750px !important; margin: 0; padding: 0; overflow: hidden;">
           <div class="modal-dialog" style="top: 10px !important; margin-top: 10px !important;">
             <div class="modal-content" id="btn_close" style="top: 10px !important; margin-top: 10px !important; padding: 0 !important; background-color: black;">
-              <img src="assets/img/icons/X.png" alt="Close modal" data-bs-dismiss="modal" style="position: fixed; top: 60px; left: 450px; width: 20px; height: 20px;"/>
+              <img src="assets/img/icons/X.png" alt="Close modal" data-bs-dismiss="modal" style="position: fixed; top: 100px; left: 450px; width: 20px; height: 20px;"/>
               <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true" alt="" style="width: 100%; height: 650px; margin-bottom: 0;">
               <div style="text-align: left; display: flex; padding-left: 10px; background-color: white;">
                 <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;오늘 하루 열지 않기
