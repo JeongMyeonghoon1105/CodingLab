@@ -77,8 +77,7 @@ var template = {
             </div>
           </div>
         </footer>
-
-        <!-- Portfolio item 1 modal popup-->
+        <!-- Scratch Curriculum Modal -->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="top: 10px !important; margin-top: 10px !important;">
           <div class="modal-dialog" style="top: 10px !important; margin-top: 10px !important;">
             <div class="modal-content" style="top: 10px !important; margin-top: 10px !important;">
@@ -118,7 +117,6 @@ var template = {
             </div>
           </div>
         </div>
-        
         <!- 디미고 합격 성과 Modal -->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="top: 50px !important; margin-top: 10px !important; width: 500px !important; height: 750px !important; margin: 0; padding: 0; overflow: hidden;">
           <div class="modal-dialog" style="top: 10px !important; margin-top: 10px !important;">
@@ -131,7 +129,6 @@ var template = {
             </div>
           </div>
         </div>
-
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -148,8 +145,7 @@ var template = {
     return `
     <link rel="stylesheet" href="css/carousel.css" />
     <script src="js/carousel.js"></script>
-
-    <!-- 메인 이미지 슬라이더 -->
+    <!-- Main Image Slider -->
     <div class="slider" style="position: relative;">
       <li class="main-slide">
         <img class="slide-image" src="../assets/img/main/header-bg.jpg">
@@ -267,14 +263,13 @@ var template = {
           </div>
       </div>
     </section>
-    <!-- 갤러리 -->
+    <!-- Gallery -->
     <section class="page-section" id="gallery">
       <div class="container" id="gallery-container">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">갤러리</h2><br>
         </div>
-
-        <!-- 이미지 슬라이더 -->
+        <!-- Gallery Image Slider -->
         <div class="gallery">
           <img src="assets/img/gallery/01.jpeg">
           <img src="assets/img/gallery/02.jpeg">
@@ -283,17 +278,16 @@ var template = {
           <img src="assets/img/gallery/05.jpg">
           <img src="assets/img/gallery/06.jpg">
         </div>
-
       </div>
     </section>
-    <!-- 상담안내 -->
+    <!-- Consulting -->
     <section class="page-section bg-light" id="consulting">
       <div class="container">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">상담안내</h2><br>
         </div>
         <div class="row">
-          <!-- 전화상담 -->
+          <!-- Telephone -->
           <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
             <div class="portfolio-item" style="height: 100%;">
               <div class="portfolio-link" style="height: 100%;">
@@ -304,7 +298,7 @@ var template = {
               </div>
             </div>
           </div>
-          <!-- 방문상담 -->
+          <!-- Visit -->
           <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
             <div class="portfolio-item" style="height: 100%;">
               <div class="portfolio-link" style="height: 100%;">
@@ -315,7 +309,7 @@ var template = {
               </div>
             </div>
           </div>
-          <!-- 블로그 -->
+          <!-- Blog -->
           <div class="col-lg-4 col-sm-6">
             <div class="portfolio-item">
               <a class="portfolio-link" href="https://blog.naver.com/codinglab9807" target="_blank">
@@ -328,7 +322,7 @@ var template = {
         </div>
       </div>
     </section>
-    <!-- 학원소식 -->
+    <!-- News -->
     <section class="page-section" id="notice">
       <div class="container">
         <div class="text-center">
@@ -347,7 +341,7 @@ var template = {
         </div>
       </div>
     </section>
-    <!-- 방문안내 -->
+    <!-- Adress -->
     <section class="page-section bg-light" id="map">
       <div class="container">
         <div class="text-center">
@@ -373,33 +367,6 @@ var template = {
         <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
         <form method="post" action="/post">
           <input type="text" id="posting-title" name="title" placeholder="제목" style="width: 100%; height: 50px; margin-bottom: 10px; font-size: 1.5em; border-radius: 5px; border: 1px solid lightgray; padding-left: 10px;">
-          <textarea id="summernote" name="editordata"></textarea>
-          <div>
-            <p style="text-align: center; font-size: 1.2em;"><input type="submit" id="submit" style="border: none; border-radius: 50px; background-color: #ffc800; color: white; width: 10vw; height: 5vh;"></p>
-          </div>
-        </form>
-        <script>
-          $(document).ready(() => {
-            $('#summernote').summernote();
-          });
-        </script>
-      </div>
-    </div>
-    `;
-  },
-  popup: () => {
-    return `
-    <!--Summernote-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    
-    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
-      <div class="container" style="min-height: 100vh;">
-        <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
-        <form method="post" action="/popup_process">
           <textarea id="summernote" name="editordata"></textarea>
           <div>
             <p style="text-align: center; font-size: 1.2em;"><input type="submit" id="submit" style="border: none; border-radius: 50px; background-color: #ffc800; color: white; width: 10vw; height: 5vh;"></p>

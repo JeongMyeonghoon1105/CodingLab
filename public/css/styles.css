@@ -219,7 +219,7 @@ button.btn-fullscreen {
 }
 
 
-/* Main 배너 반응형 디자인 */
+/* Responsive Design for Main Banner */
 @media (max-width: 575.98px) {
   .bx-prev,
   .bx-next {
