@@ -20,21 +20,21 @@ var toggleMainPopup = () => {
   console.log(handleCookie.getCookie("today"));
   // Render Modal
   if (handleCookie.getCookie("today") == "y") {
-    $("#portfolioModal2").removeClass("on");
+    $("#dimigoModal").removeClass("on");
   } else {
-    $("#portfolioModal2").addClass("on");
-    $('#portfolioModal2').modal('show');
+    $("#dimigoModal").addClass("on");
+    $('#dimigoModal').modal('show');
   }
   // Do Not Show Again for 1 day Button
-  $("#portfolioModal2").on("click", ".btn_today_close", () => {
+  $("#dimigoModal").on("click", ".btn_today_close", () => {
     handleCookie.setCookie("today", "y", 1);
-    $(this).parents("#portfolioModal2.on").removeClass("on");
-    $('#portfolioModal2').modal('hide');
+    $(this).parents("#dimigoModal.on").removeClass("on");
+    $('#dimigoModal').modal('hide');
   });
   // Close Button
-  $("#portfolioModal2").on("click", "#btn_close", () => {
-    $(this).parents("#portfolioModal2.on").removeClass("on");
-    $('#portfolioModal2').modal('hide');
+  $("#dimigoModal").on("click", "#btn-close", () => {
+    $(this).parents("#dimigoModal.on").removeClass("on");
+    $('#dimigoModal').modal('hide');
   });
 }
 // Navbar Function

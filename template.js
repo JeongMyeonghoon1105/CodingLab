@@ -71,7 +71,7 @@ var template = {
         <!-- Content -->
         ${content}
         <!-- Footer -->
-        <footer class="footer py-4" style="background-color: #212529;">
+        <footer class="footer py-4" id="footer-wrap">
           <div class="container">
             <div class="row align-items-center" id="footer-container">
               <div class="col-lg-4 text-lg-start" id="footer-inner">
@@ -99,19 +99,19 @@ var template = {
                     <div class="modal-body" style="text-align: justify">
                       <!-- Project details-->
                       <h2 class="text-uppercase" style="text-align: center">블럭코딩 커리큘럼</h2><br><br>
-                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/scratch3.png" alt="..." />
+                      <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/scratch3.png" alt="..." />
                       <p class="portfolio-text">1. 스크래치</p>
                       스크래치는 대표적인 블럭코딩 교육 플랫폼입니다. 블럭코딩을 통해 컴퓨팅적 사고를 연습합니다. 제어문, 반복문, 변수, 함수 등 코딩의 기초를 익힐 수 있습니다.
                       <br><br><br><br>
-                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/app.png" alt="..." />
+                      <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/app.png" alt="..." />
                       <p class="portfolio-text">2. 앱 인벤터</p>
                       앱 인벤터를 활용하면 블럭코딩으로 간단한 휴대폰 애플리케이션을 개발할 수 있습니다. 코딩의 실용성을 체감하고, 앱 개발 경험을 쌓는 유익한 시간이 될 것입니다.
                       <br><br><br><br>
-                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/hamster.jpg" alt="..." />
+                      <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/hamster.jpg" alt="..." />
                       <pclass="portfolio-text">3. 햄스터 로봇</pclass=>
                       햄스터 로봇은 다양한 센서를 활용할 수 있는 소프트웨어 교육용 로봇입니다. 블럭 코딩을 이용하여 햄스터 로봇을 제어하며 피지컬 컴퓨팅의 기초를 다질 수 있습니다.
                       <br><br><br><br>
-                      <img class="img-fluid d-block mx-auto" style="border-radius: 10px" src="assets/img/curriculum/tinkercad.png" alt="..." />
+                      <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/tinkercad.png" alt="..." />
                       <pclass="portfolio-text">4. 틴커캐드</pclass=>
                       틴커캐드를 활용하여 블럭코딩으로 피지컬 컴퓨팅을 배울 수 있습니다. C 언어를 몰라도 아두이노를 배울 수 있다는 점은 틴커캐드의 큰 장점 중 하나입니다. 틴커캐드 웹사이트는 전자 회로의 설계 및 작동을 시뮬레이션하는 기능을 제공합니다. 이를 활용하여 아두이노와 같은 마이크로컨트롤러와 모터, 센서, LED 등의 기계장치를 연결하는 전자 회로를 구성하고 블럭코딩으로 이를 제어할 수 있습니다.
                       <br><br><br><br>
@@ -129,12 +129,12 @@ var template = {
           </div>
         </div>
         <!- 디미고 합격 성과 Modal -->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="top: 50px !important; margin-top: 10px !important; width: 500px !important; height: 750px !important; margin: 0; padding: 0; overflow: hidden;">
-          <div class="modal-dialog" style="top: 10px !important; margin-top: 10px !important;">
-            <div class="modal-content" id="btn_close" style="top: 10px !important; margin-top: 10px !important; padding: 0 !important; background-color: black;">
-              <img src="assets/img/icons/X.png" alt="Close modal" data-bs-dismiss="modal" style="position: fixed; top: 100px; left: 450px; width: 20px; height: 20px;"/>
-              <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true" alt="" style="width: 100%; height: 650px; margin-bottom: 0;">
-              <div style="text-align: left; display: flex; padding-left: 10px; background-color: white;">
+        <div class="portfolio-modal modal fade" id="dimigoModal" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" id="modal-dialog">
+            <div class="modal-content" id="btn-close">
+              <img src="assets/img/icons/X.png" alt="Close modal" data-bs-dismiss="modal" id="close-button"/>
+              <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true" alt="" id="modal-image">
+              <div id="checkbox-area">
                 <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;오늘 하루 열지 않기
               </div>
             </div>
@@ -154,10 +154,10 @@ var template = {
   },
   main: (list) => {
     return `
-    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/carousel.css"/>
     <script src="js/carousel.js"></script>
     <!-- Main Image Slider -->
-    <div class="slider" style="position: relative;">
+    <div class="slider" id="main-slider">
       <li class="main-slide">
         <img class="slide-image" src="../assets/img/main/header-bg.jpg">
         <div class="main-title" id="main">
@@ -302,7 +302,7 @@ var template = {
           <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
             <div class="portfolio-item" style="height: 100%;">
               <div class="portfolio-link" style="height: 100%;">
-                <div style="height: 100%; background-color: #f9dfdc; border-radius: 8px; padding: 10%; border: 1px solid rgb(234, 234, 234);">
+                <div class="consulting-card" style="background-color: #f9dfdc;">
                   <p style="font-size: 1.5em; font-weight: bold;">전화상담</p>
                   <text style="font-size: 1.2em;">TEL : 010-4393-1124</text>
                 </div>
@@ -313,7 +313,7 @@ var template = {
           <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
             <div class="portfolio-item" style="height: 100%;">
               <div class="portfolio-link" style="height: 100%;">
-                <div style="height: 100%; background-color: #dbf0fa; border-radius: 8px; padding: 10%; border: 1px solid rgb(234, 234, 234);">
+                <div class="consulting-card" style="background-color: #dbf0fa;">
                   <p style="font-size: 1.5em; font-weight: bold;">방문상담</p>
                   <text style="font-size: 1.2em;">경기도 화성시 동탄반석로 120, 제일프라자 8층</text>
                 </div>
@@ -326,7 +326,7 @@ var template = {
               <a class="portfolio-link" href="https://blog.naver.com/codinglab9807" target="_blank">
                 <div class="portfolio-hover">
                 </div>
-                <img class="img-fluid" src="assets/img/consulting/blog.png" alt="..." style="border: 1px solid rgb(234, 234, 234); border-radius: 8px;">
+                <img class="img-fluid" src="assets/img/consulting/blog.png" alt="..." id="blog-card">
               </a>
             </div>
           </div>
@@ -339,14 +339,10 @@ var template = {
         <div class="text-center">
           <h2 class="section-heading text-uppercase">학원소식</h2>
         </div>
-        <div class="row" style="display: flex; justify-content: center; width: 100%; margin: 0;">
-          <div style="width: 100%; background-color: #EFF2FB;
-                      padding: 10px 0; margin-top: 1rem;
-                      border-top: 2px solid #F2EFFB; border-bottom: 2px solid #F2EFFB;
-                      font-size: 1.2em; color: gray;
-                      align-items: space-between">
-                      <div style="float: left; width: 70%; padding-left: 25px; border-right: 2px solid #E6E0F8;">제목</div>
-                      <div style="float: right; width: 30%; padding-left: 25px;">날짜</div>
+        <div class="row" id="news-container">
+          <div id="news-bar">
+            <div id="news-title">제목</div>
+            <div id="news-date">날짜</div>
           </div>
           ${list}
         </div>
@@ -358,8 +354,7 @@ var template = {
         <div class="text-center">
           <h2 class="section-heading text-uppercase">방문안내</h2><br>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1251.6430600859487!2d127.07080568819624!3d37.19946580784012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b78fb0a7474be0b!2z7L2U65Sp656p7ZWZ7JuQ!5e0!3m2!1sen!2skr!4v1654011617658!5m2!1sen!2skr"
-            width="100%" height="500em" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1251.6430600859487!2d127.07080568819624!3d37.19946580784012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b78fb0a7474be0b!2z7L2U65Sp656p7ZWZ7JuQ!5e0!3m2!1sen!2skr!4v1654011617658!5m2!1sen!2skr" width="100%" height="500em" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
     `;
@@ -372,15 +367,16 @@ var template = {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    
-    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+
+    <div id="write-wrap">
       <div class="container" style="min-height: 100vh;">
         <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
         <form method="post" action="/post">
-          <input type="text" id="posting-title" name="title" placeholder="제목" style="width: 100%; height: 50px; margin-bottom: 10px; font-size: 1.5em; border-radius: 5px; border: 1px solid lightgray; padding-left: 10px;">
+          <input type="text" id="posting-title" name="title" placeholder="제목">
           <textarea id="summernote" name="editordata"></textarea>
           <div>
-            <p style="text-align: center; font-size: 1.2em;"><input type="submit" id="submit" style="border: none; border-radius: 50px; background-color: #ffc800; color: white; width: 10vw; height: 5vh;"></p>
+            <p style="text-align: center; font-size: 1.2em;">
+            <input type="submit" id="submit"></p>
           </div>
         </form>
         <script>
@@ -394,8 +390,8 @@ var template = {
   },
   top: () => {
     return `
-    <div style="width: 100vw; min-height: 100vh; margin: 0; background-color: #f6f9fd">
-      <div class="container" style="background-color: white; margin-top: 4.5rem; padding: 4rem; min-height: 100vh;" id="posting-container">
+    <div id="top-head">
+      <div class="container" id="posting-container">
     `;
   },
   bottom: () => {

@@ -27,10 +27,7 @@ app.get('/', (req, res) => {
     var list = `<br>`;
     if (err) throw err;
     topics.forEach((elem) => {
-      list = `<a href="/posting?id=${elem.id}" class="posting-items">
-                <div class="title">${elem.title}</div>
-                <div class="datetime">${elem.datetime}</div>
-              </a>` + list
+      list = `<a href="/posting?id=${elem.id}" class="posting-items"><div class="title">${elem.title}</div><div class="datetime">${elem.datetime}</div></a>` + list
     });
     var main = template.main(list);
     var render = template.head()+template.modalBody()+template.basic(main);
@@ -49,8 +46,8 @@ app.get('/posting', (req, res) => {
   db.query(`SELECT id, title, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
     if (err) throw err;
     var posting = template.top();
-    posting = posting + `<h1 style="font-size: 2.5rem; display: block; font-size: 2em; font-weight: bold;">${topics[0].title}</h1>`;
-    posting = posting + `<div style="width: 100%; height: 1px; margin: 50px 0; background-color: lightgray;"></div>`;
+    posting = posting + `<h1 id="posting-title">${topics[0].title}</h1>`;
+    posting = posting + `<div id="posting-hr"></div>`;
     posting = posting + topics[0].content;
     posting = posting + template.bottom();
     render = template.head()+template.body()+template.basic(posting);
