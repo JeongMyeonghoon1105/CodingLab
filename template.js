@@ -1,43 +1,52 @@
 var template = {
+  head: () => {
+    return `
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <!-- Basics -->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <meta name="description" content="">
+          <meta name="author" content="">
+          <meta name="format-detection" content="telephone=no" />
+          <title>동탄코딩랩학원</title>
+          <!-- Fonts & Icons -->
+          <link rel="icon" type="image/x-icon" href="assets/img/logos/logo.png">
+          <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+          <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+          <link href="https://webfontworld.github.io/woowahan/BMHannaPro.css" rel="stylesheet">
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+          </style>
+          <!-- CSS -->
+          <link href="css/styles.css" rel="stylesheet">
+          <!-- Image Slider -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+          <script>
+            $(document).ready(function(){
+              $('.slider').bxSlider({
+                auto: true,
+              });
+              $('.gallery').bxSlider({
+                auto: false,
+              });
+            });
+          </script>
+        </head>
+      `;
+  },
+  body: () => {
+    return `<body id="page-top"></body>`;
+  },
+  modalBody: () => {
+    return `<body id="page-top" onload="toggleMainPopup()"></body>`;
+  },
   basic: (content) => {
     return `
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <!-- Basics -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="format-detection" content="telephone=no" />
-        <title>동탄코딩랩학원</title>
-        <!-- Fonts & Icons -->
-        <link rel="icon" type="image/x-icon" href="assets/img/logos/logo.png">
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
-        <link href="https://webfontworld.github.io/woowahan/BMHannaPro.css" rel="stylesheet">
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-        </style>
-        <!-- CSS -->
-        <link href="css/styles.css" rel="stylesheet">
-	      <!-- Image Slider -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-        <script>
-          $(document).ready(function(){
-            $('.slider').bxSlider({
-              auto: true,
-            });
-            $('.gallery').bxSlider({
-              auto: false,
-            });
-          });
-        </script>
-      </head>
-      <body id="page-top" onload="toggleMainPopup()">
         <!-- Header -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
           <div class="container">

@@ -33,14 +33,14 @@ app.get('/', (req, res) => {
               </a>` + list
     });
     var main = template.main(list);
-    var render = template.basic(main);
+    var render = template.head()+template.modalBody()+template.basic(main);
     res.send(render)
   })
 });
 // Post Writing Page
 app.get('/write', (req, res) => {
     var write = template.write();
-    var render = template.basic(write);
+    var render = template.head()+template.body()+template.basic(write);
     res.send(render)
 });
 // Posting Page
@@ -53,7 +53,7 @@ app.get('/posting', (req, res) => {
     posting = posting + `<div style="width: 100%; height: 1px; margin: 50px 0; background-color: lightgray;"></div>`;
     posting = posting + topics[0].content;
     posting = posting + template.bottom();
-    render = template.basic(posting);
+    render = template.head()+template.body()+template.basic(posting);
     res.send(render);
   })
 });
