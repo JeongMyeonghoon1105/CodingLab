@@ -372,7 +372,7 @@ var template = {
       <div class="container" style="min-height: 100vh;">
         <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
         <form method="post" action="/post">
-          <input type="text" id="posting-title" name="title" placeholder="제목">
+          <input type="text" id="posting-title" name="title" placeholder="제목" style="border: 1px solid lightgray; border-radius: 5px;">
           <textarea id="summernote" name="editordata"></textarea>
           <div>
             <p style="text-align: center; font-size: 1.2em;">
