@@ -4,19 +4,15 @@ var url = require('url');
 var mysql = require('mysql');
 var template = require('./template.js');
 const popup = require('node-popup');
-// const open = require('open');
-
-// import {alert} from 'node-popup';
-
+// DB Settings
 var db = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '!Codinglab1122@',
+  password : 'audgns9809',
   database : 'codinglab',
-  // multipleStatements : true
 });
 db.connect();
-
+// Parse Settings
 var bodyParser = require('body-parser');
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({
@@ -24,12 +20,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(express.static('public'));
-
-var signin = 0;
-
 // Main Page
 app.get('/', (req, res) => {
-  // open('https://github.com/JeongMyeonghoon1105/Images/blob/main/Robot.png?raw=true')
   signin = 0;
   db.query(`SELECT id, title, DATE_FORMAT(datetime, '%y-%m-%d') AS datetime FROM post`, (err, topics) => {
     var list = `<br>`;
@@ -42,24 +34,13 @@ app.get('/', (req, res) => {
     });
     var main = template.main(list);
     var render = template.basic(main);
-
-    /*
-    db.query(`SELECT content FROM popup`, (err, topic) => {
-      if (err) throw err;
-      topic.forEach((element) => {
-        // alert('hello world');
-        // window.open(element, "1st PopUp", "width=400, height=500, left=100, top=50");
-      })
-      res.send(render)
-    })
-    */
     res.send(render)
   })
 });
 // Post Writing Page
 app.get('/write', (req, res) => {
     var write = template.write();
-    var render = template.basic2(write);
+    var render = template.basic(write);
     res.send(render)
 });
 // Posting Page
@@ -72,7 +53,7 @@ app.get('/posting', (req, res) => {
     posting = posting + `<div style="width: 100%; height: 1px; margin: 50px 0; background-color: lightgray;"></div>`;
     posting = posting + topics[0].content;
     posting = posting + template.bottom();
-    render = template.basic2(posting);
+    render = template.basic(posting);
     res.send(render);
   })
 });
@@ -86,33 +67,6 @@ app.post('/post', (req, res) => {
     res.redirect('/');
   })
 });
-// Sign In Page
-// app.get('/signin', (req, res) => {
-//   if (signin == 0){
-//     res.sendFile(__dirname + "/public/html/signin.html");
-//   } else {
-//     res.redirect('/');
-//   }
-// });
-// Sign In Process
-// app.post('/signin_process', (req, res) => {
-//   db.query(`SELECT pw FROM pw WHERE id=1`, (err, topics) => {
-//     if (err) throw err;
-//     var password = req.body.password;
-//     if (topics[0].pw == password) {
-//       signin = 1;
-//       res.redirect('/write');
-//     } else {
-//       res.redirect('/signin');
-//     }
-//   })
-// });
 // Set Port
 const PORT = 3000
 app.listen(PORT);
-
-// $ npm install query-string
-// $ npm install mysql
-// $ npm install --save body-parser
-// $ npm install open
-// $ npm install node-popup
