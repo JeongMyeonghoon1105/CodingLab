@@ -433,7 +433,7 @@ button.btn-fullscreen {
 }
 @media (max-width: 991.98px) {
   .sub-image {
-    display: none;
+    display: none !important;
   }
   .bx-wrapper {
     margin-top: 4.1rem;
