@@ -29,15 +29,26 @@ app.get('/', (req, res) => {
     topics.forEach((elem) => {
       list = `<a href="/posting?id=${elem.id}" class="posting-items"><div class="title">${elem.title}</div><div class="datetime">${elem.datetime}</div></a>` + list
     });
-    var main = template.main(list);
-    var render = template.head()+template.modalBody()+template.basic(main);
+    var curriculums = [
+      template.curriculums("assets/img/curriculum/Languages.png", "프로그래밍 언어", "Programming Languages"),
+      template.curriculums("assets/img/curriculum/Robot.png", "로봇 & 자율주행차", "Robots & Self Driving Car"),
+      template.curriculums("assets/img/curriculum/AI.png", "인공지능", "Artificial Intelligence"),
+      template.curriculums("assets/img/curriculum/Web.png", "웹 & 앱 개발", "Web & App"),
+      template.curriculums("assets/img/curriculum/Unity.jpg", "게임 개발", "Games"),
+    ]
+    var total = ""
+    curriculums.forEach((value) => {
+      total += value;
+    })
+    var content = template.banner()+template.main(total, list);
+    var render = template.head()+template.modalBody()+template.basic(content)+template.modals();
     res.send(render)
   })
 });
 // Post Writing Page
 app.get('/write', (req, res) => {
     var write = template.write();
-    var render = template.head()+template.body()+template.basic(write);
+    var render = template.head()+template.body()+template.basic(write)+template.modals();
     res.send(render)
 });
 // Posting Page
@@ -50,7 +61,7 @@ app.get('/posting', (req, res) => {
     posting = posting + `<div id="posting-hr"></div>`;
     posting = posting + topics[0].content;
     posting = posting + template.bottom();
-    render = template.head()+template.body()+template.basic(posting);
+    render = template.head()+template.body()+template.basic(posting)+template.modals();
     res.send(render);
   })
 });
