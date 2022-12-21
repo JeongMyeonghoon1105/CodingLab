@@ -7,7 +7,7 @@ var template = {
           <!-- Basics -->
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          <meta name="description" content="">
+          <meta name="description" content="코딩랩학원은 동탄 반송동에 위치한 코딩 학원입니다. 스크래치, 파이썬부터 로봇과 인공지능까지 다양한 분야를 아우르는 코딩 교육을 제공합니다.">
           <meta name="author" content="">
           <meta name="format-detection" content="telephone=no" />
           <title>동탄코딩랩학원</title>
