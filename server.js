@@ -7,7 +7,7 @@ var template = require('./template.js');
 var db = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'audgns9809',
+  password : '!Codinglab1122@',
   database : 'codinglab',
 });
 db.connect();
