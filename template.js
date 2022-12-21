@@ -158,11 +158,11 @@ var template = {
     </div>
     `;
   },
-  banner: (bgcolor, font, title, subtitle, src, id, style) => {
+  banner: (bgcolor, color, font, title, subtitle, src, id, style) => {
     return `
     <li class="main-slide">
       <div class="slide-image" style="background-color: ${bgcolor};"></div>
-      <div class="main-title">
+      <div class="main-title" style="${color}">
         <p style="${font}">${title}</p>
         ${subtitle}
       </div>

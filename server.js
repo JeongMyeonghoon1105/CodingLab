@@ -7,7 +7,7 @@ var template = require('./template.js');
 var db = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '!Codinglab1122@',
+  password : 'audgns9809',
   database : 'codinglab',
 });
 db.connect();
@@ -28,9 +28,9 @@ app.get('/', (req, res) => {
       list = `<a href="/posting?id=${elem.id}" class="posting-items"><div class="title">${elem.title}</div><div class="datetime">${elem.datetime}</div></a>` + list
     });
     var banners = [
-      template.banner("#77D4FD", "", "디지털미디어고 준비반 운영", "꾸준한 합격 성과의 디미고 대비 특별 수업과 함께하세요", "../assets/img/main/school.svg", "dimigo-image", "opacity: 0.3;"),
-      template.banner("rgb(255, 248, 233)", "font-family: 'Staatliches', 'Arial'; margin: 0;", "SW 특기자 전형 준비반 운영", "코딩랩학원과 함께 생기부를 완성하세요", "../assets/img/main/school.png", "dimigo-image"),
-      template.banner("#5c23f9", "font-family: 'Staatliches', 'Arial';", "UNITY 특강 운영!", "게임 개발에 도전하세요", "../assets/img/main/game.svg", "unity-image")
+      template.banner("#77D4FD", "", "", "디지털미디어고 준비반 운영", "꾸준한 합격 성과의 디미고 대비 특별 수업과 함께하세요", "../assets/img/main/school.svg", "dimigo-image", "opacity: 0.3;"),
+      template.banner("rgb(255, 248, 233)", "color: #54544e;", "font-family: 'Staatliches', 'Arial'; margin: 0;", "SW 특기자 전형 준비반 운영", "코딩랩학원과 함께 생기부를 완성하세요", "../assets/img/main/school.png", "dimigo-image"),
+      template.banner("#5c23f9", "", "font-family: 'Staatliches', 'Arial';", "UNITY 특강 운영!", "게임 개발에 도전하세요", "../assets/img/main/game.svg", "unity-image")
     ]
     var curriculums = [
       template.curriculum("assets/img/curriculum/Languages.png", "프로그래밍 언어", "Programming Languages"),
