@@ -1,5 +1,5 @@
 var template = {
-  head: () => {
+  html: (content) => {
     return `
       <!DOCTYPE html>
       <html lang="en">
@@ -27,7 +27,7 @@ var template = {
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
           <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
           <script>
-            $(document).ready(function(){
+            $(document).ready(() => {
               $('.slider').bxSlider({
                 auto: true,
               });
@@ -37,65 +37,67 @@ var template = {
             });
           </script>
         </head>
+        ${content}
+      </html>
       `;
   },
-  body: () => {
-    return `<body id="page-top"></body>`;
-  },
-  modalBody: () => {
-    return `<body id="page-top" onload="toggleMainPopup()"></body>`;
+  body: (modal, content) => {
+    return `
+    <body id="page-top" onload=${modal}>
+      ${content}
+    </body>
+    `;
   },
   basic: (content) => {
     return `
-        <!-- Header -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-          <div class="container">
-            <a class="navbar-brand" href="/">
-              Coding lab
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              Menu
-              <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="/#curriculum">커리큘럼</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#gallery">갤러리</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#consulting">상담안내</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#notice">학원소식</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#map">방문안내</a></li>
-              </ul>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          Coding lab
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+            <li class="nav-item"><a class="nav-link" href="/#curriculum">커리큘럼</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#gallery">갤러리</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#consulting">상담안내</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#notice">학원소식</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#map">방문안내</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <link rel="stylesheet" href="css/carousel.css"/>
+    <script src="js/carousel.js"></script>
+    ${content}
+    <!-- Footer -->
+    <footer class="footer py-4" id="footer-wrap">
+      <div class="container">
+        <div class="row align-items-center" id="footer-container">
+          <div class="col-lg-4 text-lg-start" id="footer-inner">
+            <div class="navbar-brand" id="footer-logo">
+              <text id="footer-title">CODING LAB</text>
+            </div>
+            <div id="footer-text">
+              <text id="footer-adress">경기도 화성시 동탄반석로 120, 제일프라자 8층<br></text>
+              <div id="copyright">Copyright &copy; 동탄코딩랩 2022</div>
             </div>
           </div>
-        </nav>
-        <!-- Content -->
-        ${content}
-        <!-- Footer -->
-        <footer class="footer py-4" id="footer-wrap">
-          <div class="container">
-            <div class="row align-items-center" id="footer-container">
-              <div class="col-lg-4 text-lg-start" id="footer-inner">
-                <div class="navbar-brand" id="footer-logo">
-                  <text id="footer-title">CODING LAB</text>
-                </div>
-                <div id="footer-text">
-                  <text id="footer-adress">경기도 화성시 동탄반석로 120, 제일프라자 8층<br></text>
-                  <div id="copyright">Copyright &copy; 동탄코딩랩 2022</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <!-- Image Slider -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-      </body>
-    </html>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- Image Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     `;
   },
   modals: () => {
@@ -154,24 +156,21 @@ var template = {
         </div>
       </div>
     </div>
-    `
+    `;
   },
-  curriculums: (src, title, sub) => {
+  banner: (bgcolor, font, title, subtitle, src, id, style) => {
     return `
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="portfolio-item">
-        <a class="portfolio-link">
-          <img class="img-fluid" src="${src}" alt="..." />
-        </a>
-        <div class="portfolio-caption">
-          <div class="portfolio-caption-heading">${title}</div>
-          <div class="portfolio-caption-subheading text-muted">${sub}</div>
-        </div>
+    <li class="main-slide">
+      <div class="slide-image" style="background-color: ${bgcolor};"></div>
+      <div class="main-title">
+        <p style="${font}">${title}</p>
+        ${subtitle}
       </div>
-    </div>
-    `
+      <img src="${src}" class="sub-image" id="${id}" style="${style}">
+    </li>
+    `;
   },
-  banner: () => {
+  banners: (content) => {
     return `
     <div class="slider" id="main-slider">
       <li class="main-slide">
@@ -180,37 +179,12 @@ var template = {
           코딩랩학원
         </div>
       </li>
-      <li class="main-slide">
-        <div class="slide-image" style="background-color: #77D4FD;"></div>
-        <div class="main-title">
-          <p>디지털미디어고 준비반 운영</p>
-          꾸준한 합격 성과의 디미고 대비 특별 수업과 함께하세요
-        </div>
-        <img src="../assets/img/main/school.svg" class="sub-image" id="dimigo-image" style="opacity: 0.3;">
-      </li>
-      <li class="main-slide">
-        <div class="slide-image" style="background-color: rgb(255, 248, 233);"></div>
-        <div class="main-title" style="color: #54544e;">
-          <p style="font-family: 'Staatliches', 'Arial'; margin: 0;">SW 특기자 전형 준비반 운영</p>
-          코딩랩학원과 함께 생기부를 완성하세요
-        </div>
-        <img src="../assets/img/main/school.png" class="sub-image" id="dimigo-image">
-      </li>
-      <li class="main-slide">
-        <div class="slide-image" style="background-color: #5c23f9;"></div>
-        <div class="main-title">
-          <p style="font-family: 'Staatliches', 'Arial';">UNITY 특강 운영!</p>
-          게임 개발에 도전하세요
-        </div>
-        <img src="../assets/img/main/game.svg" class="sub-image" id="unity-image">
-      </li>
-    </div>`
+      ${content}
+    </div>
+    `;
   },
-  main: (curriculums, list) => {
+  curriculums: (curriculum) => {
     return `
-    <link rel="stylesheet" href="css/carousel.css"/>
-    <script src="js/carousel.js"></script>
-    <!-- Curriculums -->
     <section class="page-section bg-light" id="curriculum">
       <div class="container">
         <div class="text-center">
@@ -232,10 +206,28 @@ var template = {
               </div>
             </div>
           </div>
-          ${curriculums}
+          ${curriculum}
       </div>
     </section>
-    <!-- Gallery -->
+    `;
+  },
+  curriculum: (src, title, sub) => {
+    return `
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="portfolio-item">
+        <a class="portfolio-link">
+          <img class="img-fluid" src="${src}" alt="..." />
+        </a>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-heading">${title}</div>
+          <div class="portfolio-caption-subheading text-muted">${sub}</div>
+        </div>
+      </div>
+    </div>
+    `;
+  },
+  gallery: () => {
+    return `
     <section class="page-section" id="gallery">
       <div class="container" id="gallery-container">
         <div class="text-center">
@@ -252,7 +244,10 @@ var template = {
         </div>
       </div>
     </section>
-    <!-- Consulting -->
+    `;
+  },
+  consulting: () => {
+    return `
     <section class="page-section bg-light" id="consulting">
       <div class="container">
         <div class="text-center">
@@ -294,7 +289,10 @@ var template = {
         </div>
       </div>
     </section>
-    <!-- News -->
+    `;
+  },
+  notice: (list) => {
+    return `
     <section class="page-section" id="notice">
       <div class="container">
         <div class="text-center">
@@ -309,7 +307,10 @@ var template = {
         </div>
       </div>
     </section>
-    <!-- Adress -->
+    `;
+  },
+  adress: () => {
+    return `
     <section class="page-section bg-light" id="map">
       <div class="container">
         <div class="text-center">
@@ -349,18 +350,18 @@ var template = {
     </div>
     `;
   },
-  top: () => {
+  post: (topic, content) => {
     return `
     <div id="top-head">
       <div class="container" id="posting-container">
-    `;
-  },
-  bottom: () => {
-    return `
+        <h1 id="posting-title">
+          ${topic}
+        </h1>
+        <div id="posting-hr"></div>
+        ${content}
       </div>
     </div>
     `;
-  },
+  }
 };
-
 module.exports = template;
