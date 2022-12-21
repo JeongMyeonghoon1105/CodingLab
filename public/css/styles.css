@@ -136,7 +136,7 @@ header.bx-viewport {
   z-index: 30020;
 }
 #main {
-  font-size: 4.1rem !important;
+  font-size: 3.5rem;
   font-weight: bold;
   left: 50%;
   text-align: center !important;
@@ -520,6 +520,11 @@ button.btn-fullscreen {
   }
   .sub-image {
     right: 50%;
+  }
+}
+@media (min-width: 1350px) {
+  #main {
+    font-size: 4.1rem;
   }
 }
 /* ************************************************************ */
