@@ -12,7 +12,7 @@ var toggleMainPopup = () => {
       document.cookie = name + "=" + val + ";expires=" + date.toUTCString() + "; domain=xn--2q1byy48co33bttb.com" + ";";
     },
     // Get Cookie With Regular Expression
-    getCookie: function (name) {
+    getCookie: (name) => {
       var value = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
       return value ? value[2] : null;
     }
@@ -23,18 +23,18 @@ var toggleMainPopup = () => {
     $("#dimigoModal").removeClass("on");
   } else {
     $("#dimigoModal").addClass("on");
-    $('#dimigoModal').modal('show');
+    $("#dimigoModal").modal("show");
   }
   // Do Not Show Again for 1 day Button
   $("#dimigoModal").on("click", ".btn_today_close", () => {
     handleCookie.setCookie("today", "y", 1);
     $(this).parents("#dimigoModal.on").removeClass("on");
-    $('#dimigoModal').modal('hide');
+    $("#dimigoModal").modal("hide");
   });
   // Close Button
   $("#dimigoModal").on("click", "#btn-close", () => {
     $(this).parents("#dimigoModal.on").removeClass("on");
-    $('#dimigoModal').modal('hide');
+    $("#dimigoModal").modal("hide");
   });
 }
 // Navbar Function
@@ -75,4 +75,8 @@ window.addEventListener('DOMContentLoaded', event => {
       }
     });
   });
+});
+// Reload
+$(document).ready(function(){
+  $(this).scrollTop(0);
 });
