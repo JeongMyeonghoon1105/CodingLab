@@ -316,7 +316,6 @@ button.btn-fullscreen {
 #modal-image {
   position: relative;
   width: 100%;
-  height: 650px;
   margin-bottom: 0;
 }
 #checkbox-area {
@@ -334,8 +333,7 @@ button.btn-fullscreen {
 #dimigoModal {
   top: 50px;
   margin-top: 10px;
-  width: 500px;
-  height: 750px;
+  width: 25%;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -387,6 +385,9 @@ button.btn-fullscreen {
   .main-slide #main {
     font-size: 2.5rem !important;
   }
+  #dimigoModal {
+    width: 70% !important;
+  }
 }
 @media (max-width: 767.98px) {
   .bx-wrapper {
@@ -434,6 +435,9 @@ button.btn-fullscreen {
 @media (max-width: 991.98px) {
   .sub-image {
     display: none !important;
+  }
+  #dimigoModal {
+    width: 50%;
   }
   .bx-wrapper {
     margin-top: 4.1rem;
