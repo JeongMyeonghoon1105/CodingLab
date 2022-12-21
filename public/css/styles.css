@@ -170,7 +170,7 @@ header.bx-viewport {
 #posting-hr {
   width: 100%;
   height: 1px;
-  margin: 50px 0;
+  margin: 25px 0;
   background-color: lightgray;
 }
 .class {
@@ -345,13 +345,9 @@ button.btn-fullscreen {
   align-items: center;
 }
 #posting-title {
-  width: 100%;
-  height: 50px;
-  font-size: 1.5em;
+  margin-bottom: 0;
   border: none;
-  padding-left: 10px;
-  font-size: 2.5rem;
-  display: block;
+  padding-left: 0px;
   font-size: 2em;
   font-weight: bold;
 }
@@ -420,6 +416,9 @@ button.btn-fullscreen {
   }
 }
 @media (max-width: 371px) {
+  #posting-title {
+    font-size: 1.2em !important;
+  }
   #copyright {
     width: 95vw;
   }
@@ -433,6 +432,9 @@ button.btn-fullscreen {
   }
 }
 @media (max-width: 991.98px) {
+  #posting-title {
+    font-size: 1.5em;
+  }
   .sub-image {
     display: none !important;
   }
