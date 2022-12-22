@@ -3,6 +3,7 @@ var app = express();
 var url = require('url');
 var mysql = require('mysql');
 var template = require('./template.js');
+var details = require('./details.js');
 // DB Settings
 var db = mysql.createConnection({
   host     : 'localhost',
@@ -27,27 +28,15 @@ app.get('/', (req, res) => {
     topics.forEach((elem) => {
       list = `<a href="/posting?id=${elem.id}" class="posting-items"><div class="title">${elem.title}</div><div class="datetime">${elem.datetime}</div></a>` + list
     });
-    var banners = [
-      template.banner("#77D4FD", "", "", "디지털미디어고 준비반 운영", "꾸준한 합격 성과의 디미고 대비 특별 수업과 함께하세요", "../assets/img/main/school.svg", "dimigo-image", "opacity: 0.3;"),
-      template.banner("rgb(255, 248, 233)", "color: #54544e;", "font-family: 'Staatliches', 'Arial'; margin: 0;", "SW 특기자 전형 준비반 운영", "코딩랩학원과 함께 생기부를 완성하세요", "../assets/img/main/school.png", "dimigo-image"),
-      template.banner("#5c23f9", "", "font-family: 'Staatliches', 'Arial';", "UNITY 특강 운영!", "게임 개발에 도전하세요", "../assets/img/main/game.svg", "unity-image")
-    ]
-    var curriculums = [
-      template.curriculum("assets/img/curriculum/Languages.png", "프로그래밍 언어", "Programming Languages"),
-      template.curriculum("assets/img/curriculum/Robot.png", "로봇 & 자율주행차", "Robots & Self Driving Car"),
-      template.curriculum("assets/img/curriculum/AI.png", "인공지능", "Artificial Intelligence"),
-      template.curriculum("assets/img/curriculum/Web.png", "웹 & 앱 개발", "Web & App"),
-      template.curriculum("assets/img/curriculum/Unity.jpg", "게임 개발", "Games"),
-    ]
     var bannerTotal = ""
     var curriculumTotal = ""
     var content = "";
-    banners.forEach((value) => {
-      bannerTotal += value;
-    })
-    curriculums.forEach((value) => {
-      curriculumTotal += value;
-    })
+    for (var i = 0; i < 3; i++) {
+      bannerTotal += template.banner(details.bgcolor[i], details.color[i], details.font[i], details.title[i], details.subtitle[i], details.src[i], details.id[i], details.opacity[i]);
+    }
+    for (var i = 0; i < 5; i++) {
+      curriculumTotal += template.curriculum(details.img[i], details.main[i], details.sub[i]);
+    }
     var contents = [
       template.banners(bannerTotal),
       template.curriculums(curriculumTotal),
