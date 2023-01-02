@@ -6404,6 +6404,9 @@ fieldset:disabled .btn {
   }
 }
 @media (min-width: 1200px) {
+  .modal-dialog {
+    width: 1186px;
+  }
   .modal-xl {
     max-width: 1140px;
   }
