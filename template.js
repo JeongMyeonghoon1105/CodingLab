@@ -107,8 +107,8 @@ var template = {
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" id="modal-dialog">
         <div class="modal-content" id="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <i class="fa-solid fa-xmark" data-bs-dismiss="modal" id="block-modal-close"></i>
+          <div class="close-modal" data-bs-dismiss="modal" id="block-modal-close">
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
           </div>
           <div class="container">
             <div class="row justify-content-center">
