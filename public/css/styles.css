@@ -285,6 +285,9 @@ header.bx-viewport {
 .modal-dialog {
   margin-top: 30vh !important;
 }
+#scratch-modal-dialog {
+  margin-top: 100px !important;
+}
 .modal-content {
   z-index: 100000 !important;
 }
