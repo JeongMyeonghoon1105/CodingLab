@@ -108,7 +108,7 @@ var template = {
       <div class="modal-dialog" id="modal-dialog">
         <div class="modal-content" id="modal-content">
           <div class="close-modal" data-bs-dismiss="modal">
-            <img src="assets/img/icons/close-icon.svg" alt="Close modal"/>
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal" id="block-modal-close"></i>
           </div>
           <div class="container">
             <div class="row justify-content-center">
@@ -150,14 +150,7 @@ var template = {
       <div class="modal-dialog" id="modal-dialog">
         <div class="modal-content" id="btn-close">
           <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/special.png?raw=true" alt="" id="modal-image">
-          <!-- <img src="assets/img/icons/close-icon.svg" alt="Close modal" data-bs-dismiss="modal" id="close-button"/> -->
-          <!-- <i class="fa-duotone fa-xmark" data-bs-dismiss="modal" id="close-button" style="color: white;"></i> -->
-          <!--
-          <svg data-bs-dismiss="modal" id="close-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-            <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
-          </svg>
-          -->
-          <i class="fa-solid fa-xmark" data-bs-dismiss="modal" id="close-button" style="color: white;"></i>
+          <i class="fa-solid fa-xmark" data-bs-dismiss="modal" id="close-button"></i>
           <div id="checkbox-area">
             <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;오늘 하루 열지 않기
           </div>
