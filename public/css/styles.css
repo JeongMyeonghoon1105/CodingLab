@@ -278,6 +278,9 @@ header.bx-viewport {
 .note-statusbar {
   display: none;
 }
+#block-modal-close {
+  color: var(--bs-yellow);
+}
 .modal-dialog {
   margin-top: 30vh !important;
 }
@@ -316,6 +319,7 @@ button.btn-fullscreen {
   top: 10px;
   right: 10px;
   cursor: pointer;
+  color: white;
 }
 #modal-image {
   position: relative;
