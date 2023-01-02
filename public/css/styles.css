@@ -280,6 +280,7 @@ header.bx-viewport {
 }
 #block-modal-close {
   color: var(--bs-yellow);
+  font-size: 1.2rem;
 }
 .modal-dialog {
   margin-top: 30vh !important;
