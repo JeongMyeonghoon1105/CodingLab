@@ -149,7 +149,7 @@ var template = {
       <div class="modal-dialog" id="modal-dialog">
         <div class="modal-content" id="btn-close">
           <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/special.png?raw=true" alt="" id="modal-image">
-          <img src="assets/img/icons/X.png" alt="Close modal" data-bs-dismiss="modal" id="close-button"/>
+          <img src="assets/img/icons/close-icon.svg" alt="Close modal" data-bs-dismiss="modal" id="close-button"/>
           <div id="checkbox-area">
             <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;오늘 하루 열지 않기
           </div>
