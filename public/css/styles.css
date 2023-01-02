@@ -306,6 +306,9 @@ button.btn-fullscreen {
   padding: 0 !important;
   background-color: black;
 }
+.btn_today_close {
+  cursor: pointer;
+}
 #close-button {
   width: 20px;
   height: 20px;
