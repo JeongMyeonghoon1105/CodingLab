@@ -601,6 +601,9 @@ h1,
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
+  #scratch-modal-dialog {
+    width: 1186px;
+  }
   h1,
   .h1 {
     font-size: 2.5rem;
@@ -6404,9 +6407,6 @@ fieldset:disabled .btn {
   }
 }
 @media (min-width: 1200px) {
-  .modal-dialog {
-    width: 1186px;
-  }
   .modal-xl {
     max-width: 1140px;
   }
