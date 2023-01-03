@@ -125,11 +125,11 @@ var template = {
                   앱 인벤터를 활용하면 블럭코딩으로 간단한 휴대폰 애플리케이션을 개발할 수 있습니다. 코딩의 실용성을 체감하고, 앱 개발 경험을 쌓는 유익한 시간이 될 것입니다.
                   <br><br><br><br>
                   <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/hamster.jpeg" alt="..." />
-                  <pclass="portfolio-text">3. 햄스터 로봇</pclass=>
+                  <p class="portfolio-text">3. 햄스터 로봇</p>
                   햄스터 로봇은 다양한 센서를 활용할 수 있는 소프트웨어 교육용 로봇입니다. 블럭 코딩을 이용하여 햄스터 로봇을 제어하며 피지컬 컴퓨팅의 기초를 다질 수 있습니다.
                   <br><br><br><br>
                   <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/tinkercad.png" alt="..." />
-                  <pclass="portfolio-text">4. 틴커캐드</pclass=>
+                  <p class="portfolio-text">4. 틴커캐드</p>
                   틴커캐드를 활용하여 블럭코딩으로 피지컬 컴퓨팅을 배울 수 있습니다. C 언어를 몰라도 아두이노를 배울 수 있다는 점은 틴커캐드의 큰 장점 중 하나입니다. 틴커캐드 웹사이트는 전자 회로의 설계 및 작동을 시뮬레이션하는 기능을 제공합니다. 이를 활용하여 아두이노와 같은 마이크로컨트롤러와 모터, 센서, LED 등의 기계장치를 연결하는 전자 회로를 구성하고 블럭코딩으로 이를 제어할 수 있습니다.
                   <br><br><br><br>
                   <div style="text-align: center">
