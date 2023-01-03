@@ -124,7 +124,7 @@ var template = {
                   <p class="portfolio-text">2. 앱 인벤터</p>
                   앱 인벤터를 활용하면 블럭코딩으로 간단한 휴대폰 애플리케이션을 개발할 수 있습니다. 코딩의 실용성을 체감하고, 앱 개발 경험을 쌓는 유익한 시간이 될 것입니다.
                   <br><br><br><br>
-                  <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/hamster.jpg" alt="..." />
+                  <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/hamster.jpeg" alt="..." />
                   <pclass="portfolio-text">3. 햄스터 로봇</pclass=>
                   햄스터 로봇은 다양한 센서를 활용할 수 있는 소프트웨어 교육용 로봇입니다. 블럭 코딩을 이용하여 햄스터 로봇을 제어하며 피지컬 컴퓨팅의 기초를 다질 수 있습니다.
                   <br><br><br><br>
