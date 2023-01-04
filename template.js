@@ -153,7 +153,7 @@ var template = {
           <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/special.png?raw=true" alt="" id="modal-image">
           <i class="fa-solid fa-xmark" data-bs-dismiss="modal" id="close-button"></i>
           <div id="checkbox-area">
-            <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;오늘 하루 열지 않기
+            <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;24시간 동안 열지 않기
           </div>
         </div>
       </div>
