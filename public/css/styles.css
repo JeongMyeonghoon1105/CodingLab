@@ -76,11 +76,11 @@ header.slider {
 }
 header.bx-wrapper {
   width: 100% !important;
-  height: 60vh !important;
+  height: 70vh !important;
 }
 header.bx-viewport {
   width: 100% !important;
-  height: 60vh !important;
+  height: 70vh !important;
 }
 .bx-wrapper {
   -moz-box-shadow: none !important;
@@ -108,7 +108,7 @@ header.bx-viewport {
 .main-slide {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
 }
 .slide-image {
@@ -118,16 +118,48 @@ header.bx-viewport {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 60vh !important;
+  height: 70vh !important;
   object-fit: cover;
   margin: auto;
+}
+
+#main {
+  position: absolute;
+  width: 65%;
+  line-height: 70vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  letter-spacing: 6px;
+  text-align: left;
+  z-index: 30020;
+
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center !important;
+}
+.banner-container {
+  position: absolute;
+  height: 70vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
 }
 .main-title {
   position: absolute;
   width: 65%;
-  top: 50%;
-  left: 52%;
-  transform: translate(-50%, -50%);
+  height: 115px;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  margin: auto 0;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
@@ -135,28 +167,27 @@ header.bx-viewport {
   text-align: left;
   z-index: 30020;
 }
-#main {
-  font-size: 3.5rem;
-  font-weight: bold;
-  left: 50%;
-  text-align: center !important;
-}
 .main-title p {
-  font-size: 2.5rem;
+  line-height: 50px;
+  font-size: 1.5rem;
   font-family: "NanumSquareRound" "Arial";
+  margin-bottom: 0;
+}
+.main-title p.main-banner-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px !important;
 }
 #dimigo {
   width: 30%;
   left: 35%;
 }
 .main-slide .sub-image {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   z-index: 30000;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 15%;
   margin: auto;
 }
 .main-slide #big-sub-image {
@@ -346,7 +377,7 @@ button.btn-fullscreen {
   font-size: 1.3em;
   font-weight: bold;
 }
-#dimigoModal {
+#dimigoModal, #winterModal {
   top: 0;
   width: 35%;
   margin: 0;
@@ -380,26 +411,23 @@ button.btn-fullscreen {
   margin: 0;
   background-color: #f6f9fd;
 }
+#check-button {
+  display: block;
+  text-decoration: none;
+  background-color: #6BB0FE;
+  color: white;
+  cursor: pointer;
+  width: 290px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 35px;
+  position: absolute;
+  z-index: 10000000;
+}
 
 /* Responsive Design for Main Banner */
-@media (max-width: 575.98px) {
-  .bx-prev,
-  .bx-next {
-    display: none;
-  }
-  .main-slide .main-title {
-    font-size: 0.8rem !important;
-  }
-  .main-slide .main-title p {
-    font-size: 1.8rem !important;
-  }
-  .main-slide #main {
-    font-size: 2.5rem !important;
-  }
-  #dimigoModal {
-    width: 70% !important;
-  }
-}
 @media (max-width: 767.98px) {
   .bx-wrapper {
     margin-top: 4.1rem;
@@ -407,19 +435,22 @@ button.btn-fullscreen {
   .bx-viewport {
     margin-top: 4.1rem;
   }
-  #gallery-container .bx-wrapper .bx-viewport {
-    margin-top: 0;
+  .main-title {
+    height: 100px !important;
   }
-  .main-slide .main-title {
-    font-size: 0.5rem;
-  }
-  .main-slide .main-title p {
+  .main-title p {
+    line-height: 50px;
     font-size: 1rem;
   }
-  .main-slide .main-title {
-    width: 70% !important;
-    left: 50% !important;
-    text-align: center;
+  .main-title p.main-banner-title {
+    font-size: 2rem;
+    margin-bottom: 0 !important;
+  }
+  #check-button {
+    margin: 15px auto 0 auto !important;
+  }
+  #gallery-container .bx-wrapper .bx-viewport {
+    margin-top: 0;
   }
   #footer-logo,
   #footer-adress {
@@ -428,6 +459,25 @@ button.btn-fullscreen {
   #footer-text {
     height: 1.5em;
     margin-left: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .bx-prev,
+  .bx-next {
+    display: none;
+  }
+  .main-slide #main {
+    font-size: 2.5rem !important;
+  }
+  .main-title p {
+    line-height: 50px;
+    font-size: 0.8rem;
+  }
+  .main-title p.main-banner-title {
+    font-size: 1.5rem;
+  }
+  #dimigoModal, #winterModal {
+    width: 70% !important;
   }
 }
 @media (max-width: 371px) {
@@ -450,10 +500,7 @@ button.btn-fullscreen {
   #posting-title {
     font-size: 1.5em;
   }
-  .sub-image {
-    display: none !important;
-  }
-  #dimigoModal {
+  #dimigoModal, #winterModal {
     width: 50%;
   }
   .bx-wrapper {
@@ -481,19 +528,21 @@ button.btn-fullscreen {
   }
 }
 
-@media (max-width: 1199.98px) {
-  .sub-image {
-    right: 0;
-  }
-}
-
 @media (max-width: 1200px) {
   .sub-image {
-    opacity: 0.8;
+    display: none !important;
   }
-
-  #sw-image {
-    display: none;
+  .main-title {
+    left: 0 !important;
+    width: 100% !important;
+    text-align: center;
+  }
+  #check-button {
+    text-align: center;
+    font-size: 0.8rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
@@ -507,9 +556,7 @@ button.btn-fullscreen {
 @media (max-width: 1593px) {
 }
 @media (max-width: 1750px) {
-  .main-slide #dimigo-image {
-    opacity: 0.2;
-  }
+  
 }
 @media (max-width: 1855px) {
   .main-slide .sub-image {
@@ -519,22 +566,6 @@ button.btn-fullscreen {
   .main-slide #big-sub-image {
     width: 200px;
     height: 200px;
-  }
-  .main-slide .main-title {
-    font-size: 1.2rem;
-  }
-  .main-slide .main-title p {
-    font-size: 2.2rem;
-  }
-}
-@media (min-width: 2100px) {
-  .main-slide .main-title {
-    width: 70% !important;
-    left: 50% !important;
-    text-align: center;
-  }
-  .sub-image {
-    right: 50%;
   }
 }
 @media (min-width: 1350px) {

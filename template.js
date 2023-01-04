@@ -31,6 +31,7 @@ var template = {
             $(document).ready(() => {
               $('.slider').bxSlider({
                 auto: true,
+                touchEnabled: false
               });
               $('.gallery').bxSlider({
                 auto: false,
@@ -145,8 +146,8 @@ var template = {
         </div>
       </div>
     </div>
-    <!-- 디미고 합격 성과 Modal -->
-    <div class="portfolio-modal modal fade" id="dimigoModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- 겨울방학특강 Modal -->
+    <div class="portfolio-modal modal fade" id="winterModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" id="modal-dialog">
         <div class="modal-content" id="btn-close">
           <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/special.png?raw=true" alt="" id="modal-image">
@@ -163,11 +164,13 @@ var template = {
     return `
     <li class="main-slide">
       <div class="slide-image" style="background-color: ${bgcolor};"></div>
-      <div class="main-title" style="${color}">
-        <p style="${font}">${title}</p>
-        ${subtitle}
+      <div class="container banner-container">
+        <div class="main-title" style="${color}">
+          <p style="${font}" class="main-banner-title">${title}</p>
+          ${subtitle}
+        </div>
+        <img src="${src}" class="sub-image" id="${id}" style="${style}">
       </div>
-      <img src="${src}" class="sub-image" id="${id}" style="${style}">
     </li>
     `;
   },
@@ -176,7 +179,7 @@ var template = {
     <div class="slider" id="main-slider">
       <li class="main-slide">
         <img class="slide-image" src="../assets/img/main/header-bg.jpg">
-        <div class="main-title" id="main">
+        <div id="main">
           코딩랩학원
         </div>
       </li>
