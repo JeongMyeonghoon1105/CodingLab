@@ -20,7 +20,7 @@ var details = {
     "Web & App",
     "Games",
   ],
-  bgcolor: ["#2b4471","#FE7354" /*, "#77D4FD", "#FFF8E9" */, "#2b4471", "2b4471"],
+  bgcolor: ["#2b4471","#FE7354", "#7D64FF", "#2b4471"],
   color: ["", "color: #54544e;", ""],
   font: [
     "",
@@ -50,7 +50,7 @@ var details = {
   src: [
     "../assets/img/main/main.png",
     "../assets/img/main/coding.png",
-    "../assets/img/main/main.png",
+    "../assets/img/main/web.png",
     "../assets/img/main/game.svg",
   ]
 };
