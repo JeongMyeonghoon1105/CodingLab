@@ -160,7 +160,7 @@ var template = {
     </div>
     `;
   },
-  banner: (bgcolor, color, font, title, subtitle, src, id, style) => {
+  banner: (bgcolor, title, subtitle, button, src) => {
     return `
     <section id="hero" class="d-flex align-items-center" style="background-color: ${bgcolor};">
       <div class="container">
@@ -168,9 +168,7 @@ var template = {
           <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h1>${title}</h1><br>
             <h2>${subtitle}</h2>
-            <div class="d-flex justify-content-center justify-content-lg-start">
-              <a href="#" class="btn-get-started scrollto" style="height: 45px; line-height: 45px; padding: 0 28px;">코딩랩학원 디미고 합격실적 확인하기</a>
-            </div>
+            ${button}
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
             <img src="${src}" class="img-fluid animated" alt="">
@@ -178,42 +176,10 @@ var template = {
         </div>
       </div>
     </section>
-    <!--
-    <li class="main-slide">
-      <div class="slide-image" style="background-color: ${bgcolor};"></div>
-      <div class="container banner-container">
-        <div class="main-title" style="${color}">
-          <p style="${font}" class="main-banner-title">${title}</p>
-          ${subtitle}
-        </div>
-        <img src="${src}" class="sub-image" id="${id}" style="${style}">
-      </div>
-    </li>
-    -->
     `;
   },
   banners: (content) => {
-    return `
-      <div class="slider" id="main-slider">
-        ${content}
-        <section id="hero" class="d-flex align-items-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                <h1>UNITY 특강 운영</h1>
-                <h2>개임 개발에 도전하세요</h2>
-                <div class="d-flex justify-content-center justify-content-lg-start">
-                  <a href="#" class="btn-get-started scrollto">Get Started</a>
-                </div>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/img/main/game.svg" class="img-fluid animated" alt="">
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    `;
+    return `<div class="slider" id="main-slider">${content}</div>`;
   },
   curriculums: (curriculum) => {
     return `

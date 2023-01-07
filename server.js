@@ -31,8 +31,8 @@ app.get('/', (req, res) => {
     var bannerTotal = ""
     var curriculumTotal = ""
     var content = "";
-    for (var i = 0; i < 3; i++) {
-      bannerTotal += template.banner(details.bgcolor[i], details.color[i], details.font[i], details.title[i], details.subtitle[i], details.src[i], details.id[i], details.opacity[i]);
+    for (var i = 0; i < 4; i++) {
+      bannerTotal += template.banner(details.bgcolor[i], details.title[i], details.subtitle[i], details.button[i], details.src[i]);
     }
     for (var i = 0; i < 5; i++) {
       curriculumTotal += template.curriculum(details.img[i], details.main[i], details.sub[i]);
