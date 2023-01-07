@@ -50,10 +50,10 @@ var template = {
     </body>
     `;
   },
-  basic: (content) => {
+  basic: (bgcolor, content) => {
     return `
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: ${bgcolor}">
       <div class="container">
         <a class="navbar-brand" href="/">
           Coding lab
@@ -85,7 +85,7 @@ var template = {
               <text id="footer-title">CODING LAB</text>
             </div>
             <div id="footer-text">
-              <text id="footer-adress">경기도 화성시 동탄반석로 120, 제일프라자 8층<br></text>
+              <text id="footer-adress">경기도 화성시 동탄반석로 120, 제일프라자 805호<br></text>
               <div id="copyright">Copyright &copy; 동탄코딩랩 2022</div>
             </div>
           </div>

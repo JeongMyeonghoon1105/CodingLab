@@ -709,6 +709,11 @@ button.btn-fullscreen {
     font-size: 12px !important;
   }
 }
+@media (max-width: 300px) {
+  .page-section h2.section-heading {
+    font-size: 2rem !important;
+  }
+}
 /* ************************************************************ */
 
 *,
@@ -1365,9 +1370,9 @@ progress {
     max-width: 1000px;
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: 1470px) {
   #hero .container {
-    max-width: 1140px;
+    max-width: 1320px;
   }
 }
 @media (min-width: 1400px) {

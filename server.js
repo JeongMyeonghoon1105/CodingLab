@@ -49,14 +49,14 @@ app.get('/', (req, res) => {
     contents.forEach((value) => {
       content += value;
     })
-    var render = template.html(template.body("toggleMainPopup()", template.basic(content)))
+    var render = template.html(template.body("toggleMainPopup()", template.basic("transparent", content)))
     res.send(render)
   })
 });
 // Post Writing Page
 app.get('/write', (req, res) => {
     var write = template.write();
-    var render = template.html(template.body("", template.basic(write)))
+    var render = template.html(template.body("", template.basic("#212529", write)))
     res.send(render)
 });
 // Posting Page
@@ -64,7 +64,7 @@ app.get('/posting', (req, res) => {
   var queryData = url.parse(req.url, true).query;
   db.query(`SELECT id, title, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
     if (err) throw err;
-    var render = template.html(template.body("", template.basic(template.post(topics[0].title, topics[0].content))))
+    var render = template.html(template.body("", template.basic("#212529", template.post(topics[0].title, topics[0].content))))
     res.send(render);
   })
 });
