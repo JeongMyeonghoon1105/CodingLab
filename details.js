@@ -20,7 +20,7 @@ var details = {
     "Web & App",
     "Games",
   ],
-  bgcolor: ["#77D4FD", "#FFF8E9", "#5c23f9"],
+  bgcolor: ["#2b4471","#2b4471" /*, "#77D4FD", "#FFF8E9" */, "#2b4471", "#5c23f9"],
   color: ["", "color: #54544e;", ""],
   font: [
     "",
@@ -28,30 +28,27 @@ var details = {
     "font-family: 'Staatliches', 'Arial';",
   ],
   title: [
+    "코딩랩학원",
     "디지털미디어고 준비반 운영",
     "SW 특기자 전형 준비반 운영",
     "UNITY 특강 운영!",
   ],
   subtitle: [
-<<<<<<< HEAD
-<<<<<<< HEAD
+    "세밀한 지도로 최선의 교육을 제공합니다",
     "꾸준한 합격 성과의 디미고 대비 특별 수업과 함께하세요",
     "코딩랩학원과 함께 생기부를 완성하세요",
     "게임 개발에 도전하세요",
-=======
+    "<a href=\"https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true\" target=\"_blank\" id=\"check-button\">디미고 합격성과 확인하기</a>",
+    "<p>코딩랩학원과 함께 생기부를 완성하세요</p>",
+    "<p>게임 개발에 도전하세요</p>",
     "<a href=\"https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true\" target=\"_blank\" id=\"check-button\">디미고 합격성과 확인하기</a>",
     "<p>코딩랩학원과 함께 생기부를 완성하세요</p>",
     "<p>게임 개발에 도전하세요</p>"
->>>>>>> c2364057d23a459c41eafa161a3e8b7f7e6a6d54
-=======
-    "<a href=\"https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true\" target=\"_blank\" id=\"check-button\">디미고 합격성과 확인하기</a>",
-    "<p>코딩랩학원과 함께 생기부를 완성하세요</p>",
-    "<p>게임 개발에 도전하세요</p>"
->>>>>>> c2364057d23a459c41eafa161a3e8b7f7e6a6d54
   ],
   src: [
-    "../assets/img/main/school.svg",
-    "../assets/img/main/school.png",
+    "../assets/img/main/hero-img.png",
+    "../assets/img/main/hero-img.png",
+    "../assets/img/main/hero-img.png",
     "../assets/img/main/game.svg",
   ],
   id: ["dimigo-image", "dimigo-image", "unity-image"],

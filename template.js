@@ -30,7 +30,7 @@ var template = {
           <script>
             $(document).ready(() => {
               $('.slider').bxSlider({
-                auto: true,
+                auto: false,
                 touchEnabled: false
               });
               $('.gallery').bxSlider({
@@ -162,21 +162,18 @@ var template = {
   },
   banner: (bgcolor, color, font, title, subtitle, src, id, style) => {
     return `
-    <section id="hero" class="d-flex align-items-center">
+    <section id="hero" class="d-flex align-items-center" style="background-color: ${bgcolor};">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-            <h1>코딩랩학원</h1>
-            <h2>세밀한 지도로 최고의 교육을 제공합니다</h2>
+            <h1>${title}</h1><br>
+            <h2>${subtitle}</h2>
             <div class="d-flex justify-content-center justify-content-lg-start">
-              <a href="#" class="btn-get-started scrollto">Get Started</a>
-              <a href="#" class="glightbox btn-watch-video">
-                <i class="bi bi-play-circle"></i><span>Watch Video</span>
-              </a>
+              <a href="#" class="btn-get-started scrollto" style="height: 45px; line-height: 45px; padding: 0 28px;">코딩랩학원 디미고 합격실적 확인하기</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-            <img src="Arsha/assets/img/hero-img.png" class="img-fluid animated" alt="">
+            <img src="${src}" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
@@ -197,15 +194,25 @@ var template = {
   },
   banners: (content) => {
     return `
-    <div class="slider" id="main-slider">
-      <li class="main-slide">
-        <img class="slide-image" src="../assets/img/main/header-bg.jpg">
-        <div id="main">
-          코딩랩학원
-        </div>
-      </li>
-      ${content}
-    </div>
+      <div class="slider" id="main-slider">
+        ${content}
+        <section id="hero" class="d-flex align-items-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                <h1>UNITY 특강 운영</h1>
+                <h2>개임 개발에 도전하세요</h2>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                  <a href="#" class="btn-get-started scrollto">Get Started</a>
+                </div>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/img/main/game.svg" class="img-fluid animated" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     `;
   },
   curriculums: (curriculum) => {
@@ -213,7 +220,7 @@ var template = {
     <section class="page-section bg-light" id="curriculum">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">커리큘럼</h2><br>
+          <h2 class="section-heading text-uppercase">CURRICULUM</h2><br>
         </div>
         <div class="row">
           <!-- 스크래치 커리큘럼 -->
@@ -256,7 +263,7 @@ var template = {
     <section class="page-section" id="gallery">
       <div class="container" id="gallery-container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">갤러리</h2><br>
+          <h2 class="section-heading text-uppercase">GALLERY</h2><br>
         </div>
         <!-- Gallery Image Slider -->
         <div class="gallery">
@@ -276,7 +283,7 @@ var template = {
     <section class="page-section bg-light" id="consulting">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">상담안내</h2><br>
+          <h2 class="section-heading text-uppercase">CONTACTS</h2><br>
         </div>
         <div class="row">
           <!-- Telephone -->
@@ -321,7 +328,7 @@ var template = {
     <section class="page-section" id="notice">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">학원소식</h2>
+          <h2 class="section-heading text-uppercase">NOTICES</h2>
         </div>
         <div class="row" id="news-container">
           <div id="news-bar">
@@ -339,7 +346,7 @@ var template = {
     <section class="page-section bg-light" id="map">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">방문안내</h2><br>
+          <h2 class="section-heading text-uppercase">VISIT</h2><br>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1251.6430600859487!2d127.07080568819624!3d37.19946580784012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b78fb0a7474be0b!2z7L2U65Sp656p7ZWZ7JuQ!5e0!3m2!1sen!2skr!4v1654011617658!5m2!1sen!2skr" width="100%" height="500em" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
