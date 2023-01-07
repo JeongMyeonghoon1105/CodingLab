@@ -20,21 +20,21 @@ var toggleMainPopup = () => {
   console.log(handleCookie.getCookie("today"));
   // Render Modal
   if (handleCookie.getCookie("today") == "y") {
-    $("#dimigoModal").removeClass("on");
+    $("#winterModal").removeClass("on");
   } else {
-    $("#dimigoModal").addClass("on");
-    $("#dimigoModal").modal("show");
+    $("#winterModal").addClass("on");
+    $("#winterModal").modal("show");
   }
   // Do Not Show Again for 1 day Button
-  $("#dimigoModal").on("click", ".btn_today_close", () => {
+  $("#winterModal").on("click", ".btn_today_close", () => {
     handleCookie.setCookie("today", "y", 1);
-    $(this).parents("#dimigoModal.on").removeClass("on");
-    $("#dimigoModal").modal("hide");
+    $(this).parents("#winterModal.on").removeClass("on");
+    $("#winterModal").modal("hide");
   });
   // Close Button
-  $("#dimigoModal").on("click", "#btn-close", () => {
-    $(this).parents("#dimigoModal.on").removeClass("on");
-    $("#dimigoModal").modal("hide");
+  $("#winterModal").on("click", "#btn-close", () => {
+    $(this).parents("#winterModal.on").removeClass("on");
+    $("#winterModal").modal("hide");
   });
 }
 // Navbar Function

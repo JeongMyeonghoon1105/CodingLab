@@ -13,6 +13,7 @@ var template = {
           <title>동탄코딩랩학원</title>
           <!-- Fonts & Icons -->
           <link rel="icon" type="image/x-icon" href="assets/img/logos/logo.png">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
           <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
           <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
@@ -30,6 +31,7 @@ var template = {
             $(document).ready(() => {
               $('.slider').bxSlider({
                 auto: true,
+                touchEnabled: false
               });
               $('.gallery').bxSlider({
                 auto: false,
@@ -104,10 +106,10 @@ var template = {
     return `
     <!-- Scratch Curriculum Modal -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" id="modal-dialog">
+      <div class="modal-dialog" id="scratch-modal-dialog">
         <div class="modal-content" id="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="assets/img/icons/close-icon.svg" alt="Close modal"/>
+          <div class="close-modal" data-bs-dismiss="modal" id="block-modal-close">
+            <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
           </div>
           <div class="container">
             <div class="row justify-content-center">
@@ -123,12 +125,12 @@ var template = {
                   <p class="portfolio-text">2. 앱 인벤터</p>
                   앱 인벤터를 활용하면 블럭코딩으로 간단한 휴대폰 애플리케이션을 개발할 수 있습니다. 코딩의 실용성을 체감하고, 앱 개발 경험을 쌓는 유익한 시간이 될 것입니다.
                   <br><br><br><br>
-                  <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/hamster.jpg" alt="..." />
-                  <pclass="portfolio-text">3. 햄스터 로봇</pclass=>
+                  <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/hamster.jpeg" alt="..." />
+                  <p class="portfolio-text">3. 햄스터 로봇</p>
                   햄스터 로봇은 다양한 센서를 활용할 수 있는 소프트웨어 교육용 로봇입니다. 블럭 코딩을 이용하여 햄스터 로봇을 제어하며 피지컬 컴퓨팅의 기초를 다질 수 있습니다.
                   <br><br><br><br>
                   <img class="img-fluid d-block mx-auto" class="modal-image" src="assets/img/curriculum/tinkercad.png" alt="..." />
-                  <pclass="portfolio-text">4. 틴커캐드</pclass=>
+                  <p class="portfolio-text">4. 틴커캐드</p>
                   틴커캐드를 활용하여 블럭코딩으로 피지컬 컴퓨팅을 배울 수 있습니다. C 언어를 몰라도 아두이노를 배울 수 있다는 점은 틴커캐드의 큰 장점 중 하나입니다. 틴커캐드 웹사이트는 전자 회로의 설계 및 작동을 시뮬레이션하는 기능을 제공합니다. 이를 활용하여 아두이노와 같은 마이크로컨트롤러와 모터, 센서, LED 등의 기계장치를 연결하는 전자 회로를 구성하고 블럭코딩으로 이를 제어할 수 있습니다.
                   <br><br><br><br>
                   <div style="text-align: center">
@@ -144,14 +146,14 @@ var template = {
         </div>
       </div>
     </div>
-    <!- 디미고 합격 성과 Modal -->
-    <div class="portfolio-modal modal fade" id="dimigoModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- 겨울방학특강 Modal -->
+    <div class="portfolio-modal modal fade" id="winterModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" id="modal-dialog">
         <div class="modal-content" id="btn-close">
-          <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true" alt="" id="modal-image">
-          <img src="assets/img/icons/X.png" alt="Close modal" data-bs-dismiss="modal" id="close-button"/>
+          <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/special.png?raw=true" alt="" id="modal-image">
+          <i class="fa-solid fa-xmark" data-bs-dismiss="modal" id="close-button"></i>
           <div id="checkbox-area">
-            <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;오늘 하루 열지 않기
+            <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;24시간 동안 열지 않기
           </div>
         </div>
       </div>
@@ -162,11 +164,13 @@ var template = {
     return `
     <li class="main-slide">
       <div class="slide-image" style="background-color: ${bgcolor};"></div>
-      <div class="main-title" style="${color}">
-        <p style="${font}">${title}</p>
-        ${subtitle}
+      <div class="container banner-container">
+        <div class="main-title" style="${color}">
+          <p style="${font}" class="main-banner-title">${title}</p>
+          ${subtitle}
+        </div>
+        <img src="${src}" class="sub-image" id="${id}" style="${style}">
       </div>
-      <img src="${src}" class="sub-image" id="${id}" style="${style}">
     </li>
     `;
   },
@@ -175,7 +179,7 @@ var template = {
     <div class="slider" id="main-slider">
       <li class="main-slide">
         <img class="slide-image" src="../assets/img/main/header-bg.jpg">
-        <div class="main-title" id="main">
+        <div id="main">
           코딩랩학원
         </div>
       </li>
