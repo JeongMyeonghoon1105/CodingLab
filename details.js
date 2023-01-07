@@ -20,7 +20,7 @@ var details = {
     "Web & App",
     "Games",
   ],
-  bgcolor: ["#2b4471","#FE7354", "#7D64FF", "#2b4471"],
+  bgcolor: ["#2b4471","#FE7354", "#2b4471", "#7D64FF"],
   color: ["", "color: #54544e;", ""],
   font: [
     "",
@@ -30,14 +30,14 @@ var details = {
   title: [
     "코딩랩학원",
     "디지털미디어고 준비반 운영",
-    "SW 특기자 전형 준비반 운영",
     "UNITY 특강 운영!",
+    "SW 특기자 전형 준비반 운영"
   ],
   subtitle: [
     "세밀한 지도로 최선의 교육을 제공합니다",
     "",
-    "코딩랩학원과 함께 생기부를 완성하세요",
     "게임 개발에 도전하세요",
+    "코딩랩학원과 함께 생기부를 완성하세요"
   ],
   button: [
     "",
@@ -50,8 +50,8 @@ var details = {
   src: [
     "../assets/img/main/main.png",
     "../assets/img/main/coding.png",
-    "../assets/img/main/web.png",
     "../assets/img/main/game.svg",
+    "../assets/img/main/web.png"
   ]
 };
 module.exports = details;
