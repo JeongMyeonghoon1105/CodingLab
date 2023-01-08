@@ -334,7 +334,8 @@ var template = {
           <textarea id="summernote" name="editordata"></textarea>
           <div>
             <p style="text-align: center; font-size: 1.2em;">
-            <input type="submit" id="submit"></p>
+              <input type="submit" id="submit" style="border-radius: 5px;">
+            </p>
           </div>
         </form>
         <script>

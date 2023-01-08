@@ -410,6 +410,7 @@ header.bx-viewport {
 }
 #footer-title {
   color: #ffc800;
+  font-size: 1.25rem !important;
   font-weight: bold;
   letter-spacing: 0.0625em;
 }
@@ -586,6 +587,10 @@ form #posting-title {
 
 #gallery-container .bx-wrapper {
   width: 100% !important;
+}
+
+.dropdown-toggle {
+  display: none !important;
 }
 
 /* Responsive Design for Main Banner */
