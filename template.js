@@ -8,7 +8,7 @@ var template = {
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <meta name="description" content="코딩랩학원은 동탄 반송동에 위치한 코딩 학원입니다. 스크래치, 파이썬부터 로봇과 인공지능까지 다양한 분야를 아우르는 코딩 교육을 제공합니다.">
-          <meta name="author" content="">
+          <meta name="author" content="Jeong Myeonghoon">
           <meta name="format-detection" content="telephone=no" />
           <title>동탄코딩랩학원</title>
           <!-- Fonts & Icons -->
@@ -18,9 +18,7 @@ var template = {
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
           <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
           <link href="https://webfontworld.github.io/woowahan/BMHannaPro.css" rel="stylesheet">
-          <style>
-            @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-          </style>
+          <style>@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');</style>
           <!-- CSS -->
           <link href="css/styles.css" rel="stylesheet">
           <!-- Image Slider -->
@@ -50,7 +48,7 @@ var template = {
     </body>
     `;
   },
-  basic: (bgcolor, content) => {
+  basic: (bgcolor, display, content) => {
     return `
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: ${bgcolor}">
@@ -58,12 +56,12 @@ var template = {
         <a class="navbar-brand" href="/">
           Coding lab
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="${display}">
           Menu
           <i class="fas fa-bars ms-1"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" style="${display}">
             <li class="nav-item"><a class="nav-link" href="/#curriculum">커리큘럼</a></li>
             <li class="nav-item"><a class="nav-link" href="/#gallery">갤러리</a></li>
             <li class="nav-item"><a class="nav-link" href="/#consulting">상담안내</a></li>
@@ -332,7 +330,7 @@ var template = {
       <div class="container" style="min-height: 100vh;">
         <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
         <form method="post" action="/post">
-          <input type="text" id="posting-title" name="title" placeholder="제목" style="border: 1px solid lightgray; border-radius: 5px;">
+          <input type="text" id="posting-title" name="title" placeholder="제목">
           <textarea id="summernote" name="editordata"></textarea>
           <div>
             <p style="text-align: center; font-size: 1.2em;">
