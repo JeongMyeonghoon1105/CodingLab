@@ -132,7 +132,7 @@
     width: 50%;
   }
 
-  .container .row {
+  #hero .container .row {
     margin-top: 160px;
   }
 }
