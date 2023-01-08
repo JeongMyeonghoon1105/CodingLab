@@ -245,35 +245,32 @@ var template = {
   consulting: () => {
     return `
     <section class="page-section bg-light" id="consulting">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">CONTACTS</h2><br>
         </div>
         <div class="row">
-          <!-- Telephone -->
-          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="portfolio-item" style="height: 100%;">
               <div class="portfolio-link" style="height: 100%;">
-                <div class="consulting-card" style="background-color: #f9dfdc;">
-                  <p style="font-size: 1.5em; font-weight: bold;">전화상담</p>
-                  <text style="font-size: 1.2em;">TEL : 010-4393-1124</text>
+                <div class="consulting-card">
+                  <p>전화상담</p>
+                  <text>TEL : 010-4393-1124</text>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Visit -->
-          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="portfolio-item" style="height: 100%;">
               <div class="portfolio-link" style="height: 100%;">
-                <div class="consulting-card" style="background-color: #dbf0fa;">
-                  <p style="font-size: 1.5em; font-weight: bold;">방문상담</p>
-                  <text style="font-size: 1.2em;">경기도 화성시 동탄반석로 120, 제일프라자 8층</text>
+                <div class="consulting-card">
+                  <p>방문상담</p>
+                  <text>경기도 화성시 동탄반석로 120, 제일프라자 8층</text>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Blog -->
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="portfolio-item">
               <a class="portfolio-link" href="https://blog.naver.com/codinglab9807" target="_blank">
                 <div class="portfolio-hover">

@@ -365,7 +365,6 @@ header.bx-viewport {
 }
 #blog-card {
   border: 1px solid rgb(234, 234, 234);
-  border-radius: 8px;
 }
 #news-container {
   display: flex;
@@ -591,6 +590,38 @@ form #posting-title {
 
 .dropdown-toggle {
   display: none !important;
+}
+
+#consulting .container .row .col-lg-4 .portfolio-item {
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0 !important;
+}
+
+#consulting .container .row .col-lg-4 .portfolio-item .portfolio-link {
+  border-radius: 0 !important;
+}
+
+#consulting .container .row .col-lg-4 .portfolio-item .portfolio-link .consulting-card {
+  border-radius: 0 !important;
+}
+
+#blog-card {
+  border-radius: 0;
+}
+
+.portfolio-link .consulting-card {
+  background-color: white;
+}
+
+.portfolio-link p {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #37517e;
+}
+
+.portfolio-link .consulting-card text {
+  font-size: 1.2em;
+  color: black;
 }
 
 /* Responsive Design for Main Banner */
