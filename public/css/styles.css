@@ -114,6 +114,8 @@
 
   #hero {
     text-align: center;
+    height: 100vh !important;
+    padding-bottom: 150px !important;
   }
 
   #hero .animated {
@@ -128,6 +130,10 @@
 
   #hero .hero-img img {
     width: 50%;
+  }
+
+  .container .row {
+    margin-top: 160px;
   }
 }
 
@@ -156,6 +162,24 @@
   #hero .btn-get-started {
     font-size: 16px;
     padding: 10px 24px 11px 24px;
+  }
+  .col-lg-6 h2 {
+    display: none;
+  }
+  .col-lg-6 .justify-content-lg-start {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .col-lg-6 h1 {
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 315px) {
+  .col-lg-6 h1 {
+    font-size: 20px !important;
   }
 }
 
