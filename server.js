@@ -105,7 +105,7 @@ app.get('/', (req, res) => {
 // Post Writing Page
 app.get('/write', (req, res) => {
   var write = template.write("", "");
-  var render = template.html(template.body("", "background-color: rgb(244, 248, 253);", write))
+  var render = template.html(template.body("", "background-color: rgb(153, 143, 181)", write))
   res.send(render)
 });
 // Posting Page
@@ -144,7 +144,7 @@ app.get('/edit', (req, res) => {
     var content = topics[0].content;
     var write = template.write(title, content)
     db.query(`DELETE FROM post WHERE id='${queryData.id}'`, (err) => {
-      var render = template.html(template.body("", "background-color: rgb(244, 248, 253);", write))
+      var render = template.html(template.body("", "background-color: rgb(153, 143, 181)", write))
       res.send(render)
     })
   });

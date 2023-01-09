@@ -310,7 +310,7 @@ var template = {
         &nbsp;
         <i class="fa-solid fa-pen-to-square" onclick=location.href='/edit?id=${id}'></i>
         &nbsp;
-        <a href="/posting?id=${id}" style="text-decoration: none;">${title}</a>
+        <a href="/posting?id=${id}">${title}</a>
       </div>
       <div class="datetime">${datetime}</div>
     </div>
@@ -380,7 +380,7 @@ var template = {
         <h2>로그인</h2>
         <form action="/auth/login_process" method="post">
         <p><input class="login" type="password" name="pwd" placeholder="비밀번호"></p>
-        <p><input class="btn" type="submit" value="로그인"></p>
+        <p><input class="sbtn" type="submit" value="로그인"></p>
         </form>
       </div>
     </div>
