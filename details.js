@@ -42,7 +42,7 @@ var details = {
   button: [
     "",
     `<div class="d-flex justify-content-center justify-content-lg-start">
-      <a href="https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true" class="btn-get-started scrollto" style="height: 45px; line-height: 45px; padding: 0 28px;">코딩랩학원 디미고 합격실적 확인하기</a>
+      <a href="https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true" target="_blank" class="btn-get-started scrollto" style="height: 45px; line-height: 45px; padding: 0 28px;">코딩랩학원 디미고 합격실적 확인하기</a>
     </div>`,
     "",
     ""
