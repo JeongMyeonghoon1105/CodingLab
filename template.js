@@ -314,7 +314,7 @@ var template = {
     </section>
     `;
   },
-  write: () => {
+  write: (title, content) => {
     return `
     <!--Summernote-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -327,8 +327,8 @@ var template = {
       <div class="container" style="min-height: 100vh;">
         <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
         <form method="post" action="/post">
-          <input type="text" id="posting-title" name="title" placeholder="제목">
-          <textarea id="summernote" name="editordata"></textarea>
+          <input type="text" id="posting-title" name="title" placeholder="제목" value="${title}">
+          <textarea id="summernote" name="editordata">${content}</textarea>
           <div>
             <p style="text-align: center; font-size: 1.2em;">
               <input type="submit" id="submit" style="border-radius: 5px;">

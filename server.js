@@ -18,6 +18,7 @@ var db = mysql.createConnection({
 db.connect();
 // Parse Settings
 var bodyParser = require('body-parser');
+const { query } = require('express');
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({
   limit: '50mb',
@@ -111,9 +112,9 @@ app.get('/', (req, res) => {
 });
 // Post Writing Page
 app.get('/write', (req, res) => {
-    var write = template.write();
-    var render = template.html(template.body("", template.basic("#212529", "display: none;", write)))
-    res.send(render)
+  var write = template.write("", "");
+  var render = template.html(template.body("", template.basic("#212529", "display: none;", write)))
+  res.send(render)
 });
 // Posting Page
 app.get('/posting', (req, res) => {
@@ -145,16 +146,16 @@ app.get('/delete', (req, res) => {
 // Post Update Process
 app.get('/edit', (req, res) => {
   var queryData = url.parse(req.url, true).query;
+  db.query(`SELECT * FROM post WHERE id='${queryData.id}'`, (err, topics) => {
+    if (err) throw err;
+    var title = topics[0].title;
+    var content = topics[0].content;
+    var write = template.write(title, content)
     db.query(`DELETE FROM post WHERE id='${queryData.id}'`, (err) => {
-      if (err) throw err;
-      var title = req.body.title;
-      var content = req.body.editordata;
-      db.query(`INSERT INTO post(title, content, datetime) VALUES (?, ?, DATE_FORMAT(now(), '%Y-%m-%d'))`, [title, content], (err, topics) => {
-        if (err) throw err;
-        res.redirect('/');
-      })
-    }
-  )
+      var render = template.html(template.body("", template.basic("#212529", "display: none;", write)))
+      res.send(render)
+    })
+  });
 });
 // Set Port
 const PORT = 3000
