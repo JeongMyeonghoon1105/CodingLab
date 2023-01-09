@@ -9,7 +9,7 @@ var toggleMainPopup = () => {
       date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
       console.log(name + "=" + val + ";expires=" + date.toUTCString() + ";path=/");
       // Set Cookie
-      document.cookie = name + "=" + val + ";expires=" + date.toUTCString() + "; domain=xn--2q1byy48co33bttb.com" + ";";
+      document.cookie = name + "=" + val + ";expires=" + date.toUTCString() + ";";
     },
     // Get Cookie With Regular Expression
     getCookie: (name) => {

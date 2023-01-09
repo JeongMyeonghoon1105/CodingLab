@@ -28,7 +28,7 @@ var template = {
           <script>
             $(document).ready(() => {
               $('.slider').bxSlider({
-                auto: true,
+                auto: false,
                 touchEnabled: false
               });
               $('.gallery').bxSlider({
