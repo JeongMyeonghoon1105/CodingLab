@@ -2,10 +2,10 @@ var express = require('express');
 var app = express();
 var url = require('url');
 var mysql = require('mysql');
-var template = require('./template.js');
-var details = require('./details.js');
-var authRouter = require('./auth');
-var authCheck = require('./authCheck.js');
+var template = require('./public/js/template.js');
+var details = require('./public/js/details.js');
+var authRouter = require('./public/js/auth');
+var authCheck = require('./public/js/authCheck.js');
 const session = require('express-session')
 const FileStore = require('session-file-store')(session)
 // DB Settings
