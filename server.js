@@ -41,16 +41,7 @@ app.get('/', (req, res) => {
       var list = `<br>`;
       if (err) throw err;
       topics.forEach((elem) => {
-        list = `<div class="posting-items">
-                  <div class="title">
-                    <i class="fa-solid fa-trash" onclick=location.href='/delete?id=${elem.id}'></i>
-                    &nbsp;
-                    <i class="fa-solid fa-pen-to-square" onclick=location.href='/edit?id=${elem.id}'></i>
-                    &nbsp;
-                    <a href="/posting?id=${elem.id}" style="text-decoration: none;">${elem.title}</a>
-                  </div>
-                  <div class="datetime">${elem.datetime}</div>
-                </div>` + list
+        list = template.posting(elem.id, elem.title, elem.datetime) + list
       });
       var bannerTotal = ""
       var curriculumTotal = ""

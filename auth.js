@@ -12,13 +12,7 @@ db.connect();
 
 // 로그인 화면
 router.get('/login', (request, response) => {
-  var html = template.html(template.body("", template.basic("#212529", "display: none;", `
-    <h2>로그인</h2>
-    <form action="/auth/login_process" method="post">
-    <p><input class="login" type="password" name="pwd" placeholder="비밀번호"></p>
-    <p><input class="btn" type="submit" value="로그인"></p>
-    </form>
-  `)))
+  var html = template.html(template.body("", template.basic("#212529", "display: none;", template.signin())))
   response.send(html);
 });
 

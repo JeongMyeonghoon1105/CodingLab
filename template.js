@@ -302,6 +302,20 @@ var template = {
     </section>
     `;
   },
+  posting: (id, title, datetime) => {
+    return `
+    <div class="posting-items">
+      <div class="title">
+        <i class="fa-solid fa-trash" onclick=location.href='/delete?id=${id}'></i>
+        &nbsp;
+        <i class="fa-solid fa-pen-to-square" onclick=location.href='/edit?id=${id}'></i>
+        &nbsp;
+        <a href="/posting?id=${id}" style="text-decoration: none;">${title}</a>
+      </div>
+      <div class="datetime">${datetime}</div>
+    </div>
+    `
+  },
   adress: () => {
     return `
     <section class="page-section bg-light" id="map">
@@ -357,5 +371,14 @@ var template = {
     </div>
     `;
   },
+  signin: () => {
+    return `
+      <h2>로그인</h2>
+      <form action="/auth/login_process" method="post">
+      <p><input class="login" type="password" name="pwd" placeholder="비밀번호"></p>
+      <p><input class="btn" type="submit" value="로그인"></p>
+      </form>
+    `
+  }
 };
 module.exports = template;
