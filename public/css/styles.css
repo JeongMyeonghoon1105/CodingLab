@@ -179,6 +179,8 @@
   #posting-container {
     padding: 4rem 2.8rem !important;
   }
+
+
 }
 
 @media (max-width: 315px) {
@@ -701,6 +703,45 @@ form #posting-title {
   background-color: rgb(86, 82, 141);
   margin: 0 auto;
   color: white;
+}
+
+@media (max-width: 768px) {
+  #signin {
+    width: 400px;
+    height: 500px;
+  }
+
+  #signin .container {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  #signin {
+    width: 350px;
+  }
+
+  #signin .container .login {
+    width: 250px;
+  }
+  
+  #signin .container .sbtn {
+    width: 250px;
+  }
+}
+
+@media (max-width: 420px) {
+  #signin {
+    width: 280px;
+  }
+
+  #signin .container .login {
+    width: 180px;
+  }
+  
+  #signin .container .sbtn {
+    width: 180px;
+  }
 }
 
 /* Responsive Design for Main Banner */
