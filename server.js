@@ -42,9 +42,9 @@ app.get('/', (req, res) => {
       topics.forEach((elem) => {
         list = `<div class="posting-items">
                   <div class="title">
-                    <i class="fa-solid fa-trash" onclick=location.href='/delete?id=${queryData.id}'></i>
+                    <i class="fa-solid fa-trash" onclick=location.href='/delete?id=${elem.id}'></i>
                     &nbsp;
-                    <i class="fa-solid fa-pen-to-square" onclick=location.href='/edit?id=${queryData.id}'></i>
+                    <i class="fa-solid fa-pen-to-square" onclick=location.href='/edit?id=${elem.id}'></i>
                     &nbsp;
                     <a href="/posting?id=${elem.id}" style="text-decoration: none;">${elem.title}</a>
                   </div>
@@ -138,28 +138,23 @@ app.use('/auth', authRouter);
 // Post Delete Process
 app.get('/delete', (req, res) => {
   var queryData = url.parse(req.url, true).query;
-  console.log(queryData.id);
-  req.on('end', () => {
-    db.query(`DELETE FROM post WHERE id='${queryData.id}'`, (err) => {
-      res.redirect('/');
-    });
+  db.query(`DELETE FROM post WHERE id='${queryData.id}'`, (err) => {
+    res.redirect('/');
   });
 });
 // Post Update Process
 app.get('/edit', (req, res) => {
   var queryData = url.parse(req.url, true).query;
-  req.on('end', () => {
     db.query(`DELETE FROM post WHERE id='${queryData.id}'`, (err) => {
+      if (err) throw err;
+      var title = req.body.title;
+      var content = req.body.editordata;
+      db.query(`INSERT INTO post(title, content, datetime) VALUES (?, ?, DATE_FORMAT(now(), '%Y-%m-%d'))`, [title, content], (err, topics) => {
         if (err) throw err;
-        var title = req.body.title;
-        var content = req.body.editordata;
-        db.query(`INSERT INTO post(title, content, datetime) VALUES (?, ?, DATE_FORMAT(now(), '%Y-%m-%d'))`, [title, content], (err, topics) => {
-          if (err) throw err;
-          res.redirect('/');
-        })
-      }
-    )
-  });
+        res.redirect('/');
+      })
+    }
+  )
 });
 // Set Port
 const PORT = 3000
