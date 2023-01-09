@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({
   limit: '50mb',
   extended: true
 }));
+// Public
 app.use(express.static('public'));
 // Session
 app.use(session({
@@ -64,7 +65,7 @@ app.get('/', (req, res) => {
       contents.forEach((value) => {
         content += value;
       })
-      var render = template.html(template.body("toggleMainPopup()", template.basic("transparent", "", content)))
+      var render = template.html(template.body("toggleMainPopup()", "", template.basic("transparent", "", content)))
       res.send(render)
     })
   // Logged Out Status
@@ -96,7 +97,7 @@ app.get('/', (req, res) => {
       contents.forEach((value) => {
         content += value;
       })
-      var render = template.html(template.body("toggleMainPopup()", template.basic("transparent", "", content)))
+      var render = template.html(template.body("toggleMainPopup()", "", template.basic("transparent", "", content)))
       res.send(render)
     })
   }
@@ -104,7 +105,7 @@ app.get('/', (req, res) => {
 // Post Writing Page
 app.get('/write', (req, res) => {
   var write = template.write("", "");
-  var render = template.html(template.body("", template.basic("#212529", "display: none;", write)))
+  var render = template.html(template.body("", "background-color: rgb(244, 248, 253);", write))
   res.send(render)
 });
 // Posting Page
@@ -112,7 +113,7 @@ app.get('/posting', (req, res) => {
   var queryData = url.parse(req.url, true).query;
   db.query(`SELECT id, title, content FROM post WHERE id=${queryData.id}`, (err, topics) => {
     if (err) throw err;
-    var render = template.html(template.body("", template.basic("#212529", "display: none;", template.post(topics[0].title, topics[0].content))))
+    var render = template.html(template.body("", "", template.basic("#212529", "display: none;", template.post(topics[0].title, topics[0].content))))
     res.send(render);
   })
 });
@@ -143,7 +144,7 @@ app.get('/edit', (req, res) => {
     var content = topics[0].content;
     var write = template.write(title, content)
     db.query(`DELETE FROM post WHERE id='${queryData.id}'`, (err) => {
-      var render = template.html(template.body("", template.basic("#212529", "display: none;", write)))
+      var render = template.html(template.body("", "background-color: rgb(244, 248, 253);", write))
       res.send(render)
     })
   });

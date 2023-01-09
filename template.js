@@ -41,9 +41,9 @@ var template = {
       </html>
       `;
   },
-  body: (modal, content) => {
+  body: (modal, style, content) => {
     return `
-    <body id="page-top" onload=${modal}>
+    <body id="page-top" onload="${modal}" style="${style}">
       ${content}
     </body>
     `;
@@ -339,16 +339,18 @@ var template = {
 
     <div id="write-wrap">
       <div class="container" style="min-height: 100vh;">
-        <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
-        <form method="post" action="/post">
-          <input type="text" id="posting-title" name="title" placeholder="제목" value="${title}">
-          <textarea id="summernote" name="editordata">${content}</textarea>
-          <div>
-            <p style="text-align: center; font-size: 1.2em;">
-              <input type="submit" id="submit" style="border-radius: 5px;">
-            </p>
-          </div>
-        </form>
+        <div class="inner">
+          <p><h2 style="font-weight: bold;">글쓰기</h2></p><br>
+          <form method="post" action="/post">
+            <input type="text" id="posting-title" name="title" placeholder="제목" value="${title}">
+            <textarea id="summernote" name="editordata">${content}</textarea>
+            <div>
+              <p style="text-align: center; font-size: 1.2em;">
+                <input type="submit" id="submit" style="border-radius: 5px;">
+              </p>
+            </div>
+          </form>
+        </div>
         <script>
           $(document).ready(() => {
             $('#summernote').summernote();
@@ -373,11 +375,15 @@ var template = {
   },
   signin: () => {
     return `
-      <h2>로그인</h2>
-      <form action="/auth/login_process" method="post">
-      <p><input class="login" type="password" name="pwd" placeholder="비밀번호"></p>
-      <p><input class="btn" type="submit" value="로그인"></p>
-      </form>
+    <div id="signin" class="text-center">
+      <div class="container">
+        <h2>로그인</h2>
+        <form action="/auth/login_process" method="post">
+        <p><input class="login" type="password" name="pwd" placeholder="비밀번호"></p>
+        <p><input class="btn" type="submit" value="로그인"></p>
+        </form>
+      </div>
+    </div>
     `
   }
 };
