@@ -44,7 +44,7 @@
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -989,7 +989,7 @@ button:not(:disabled),
 }
 
 .img-fluid {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   border-radius: 8px 8px 0 0;
 }
