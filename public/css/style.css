@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+:root {
+  --bs-yellow: #ffc800;
+  --bs-body-color: #212529;
+}
+
+html {
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+#navbarResponsive ul {
+  margin-top: 0;
+}
+
+/* Banner */
+#hero {
+  width: 100%;
+  height: 80vh;
+  background: #2b4471;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero h2 {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+#hero .btn-get-started {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #ffad69;
+}
+
+#hero .btn-get-started:hover {
+  background: #209dd8;
+}
+
+#hero .btn-watch-video {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  margin: 10px 0 0 25px;
+  color: #fff;
+  line-height: 1;
+}
+
+#hero .btn-watch-video i {
+  line-height: 0;
+  color: #fff;
+  font-size: 32px;
+  transition: 0.3s;
+  margin-right: 8px;
+}
+
+#hero .btn-watch-video:hover i {
+  color: #47b2e4;
+}
+
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+/* Responsive Max */
+@media (max-width: 300px) {
+
+}
+@media (max-width: 315px) {
+
+}
+@media (max-width: 325px) {
+
+}
+@media (max-width: 334px) {
+
+}
+@media (max-width: 371px) {
+
+}
+@media (max-width: 400px) {
+
+}
+@media (max-width: 575px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 991px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1300px) {
+
+}
+@media (max-width: 1400px) {
+
+}
+@media (max-width: 1855px) {
+
+}
+
+/* Responsive Min */
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1350px) {
+
+}
+@media (min-width: 1400px) {
+
+}
+@media (min-width: 1470px) {
+
+}
