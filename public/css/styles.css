@@ -556,9 +556,9 @@ button.btn-fullscreen {
   background-color: white;
 }
 
-@media (max-height: 800px) {
+@media (max-height: 1000px) {
   #write-wrap .container {
-    min-height: 800px;
+    min-height: 1000px !important;
   }
 }
 
