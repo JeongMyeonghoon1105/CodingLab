@@ -110,7 +110,6 @@
 @media (max-width: 991px) {
   #mainNav {
     background-color: var(--bs-body-color) !important;
-    transition: 0.5s !important;
   }
 
   #hero {
@@ -1332,6 +1331,27 @@ fieldset:disabled .btn {
 
 .fade {
   transition: opacity 0.15s linear;
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.collapsing.collapse-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.collapse-horizontal {
+    transition: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
