@@ -12,5 +12,5 @@
 * Ubuntu Server
 
 ## Notes
-* Images were taken by ourselves or downloaded from pixabay.
+* Images were downloaded from pixabay.com and vecteezy.com.
 * Hosted by our own Ubuntu Server.
