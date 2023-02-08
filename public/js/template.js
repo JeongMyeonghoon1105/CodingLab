@@ -148,7 +148,7 @@ var template = {
     <div class="portfolio-modal modal fade" id="winterModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" id="modal-dialog">
         <div class="modal-content" id="btn-close">
-          <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/special.png?raw=true" alt="" id="modal-image">
+          <img src="https://github.com/JeongMyeonghoon1105/Images/blob/main/image.png?raw=true" alt="" id="modal-image">
           <i class="fa-solid fa-xmark" data-bs-dismiss="modal" id="close-button"></i>
           <div id="checkbox-area">
             <input type="checkbox" class="btn_today_close" name="donotshow">&nbsp;&nbsp;24시간 동안 열지 않기
