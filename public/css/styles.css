@@ -512,6 +512,7 @@ button.btn-fullscreen {
   cursor: pointer;
   // color: white;
   color: #black;
+  font-weight: bold;
 }
 #modal-image {
   position: relative;
