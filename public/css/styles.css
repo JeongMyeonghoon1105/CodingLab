@@ -499,6 +499,7 @@ button.btn-fullscreen {
   margin-top: 10px !important;
   padding: 0 !important;
   background-color: black;
+  color: #ffc800 !important;
 }
 .btn_today_close {
   cursor: pointer;
