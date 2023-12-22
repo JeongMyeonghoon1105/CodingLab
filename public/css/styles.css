@@ -499,7 +499,6 @@ button.btn-fullscreen {
   margin-top: 10px !important;
   padding: 0 !important;
   background-color: black;
-  color: #ffc800 !important;
 }
 .btn_today_close {
   cursor: pointer;
@@ -511,7 +510,8 @@ button.btn-fullscreen {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  color: white;
+  // color: white;
+  color: #ffc800 !important;
 }
 #modal-image {
   position: relative;
