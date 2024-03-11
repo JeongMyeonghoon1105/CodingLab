@@ -10,10 +10,10 @@ const session = require('express-session')
 const FileStore = require('session-file-store')(session)
 // DB Settings
 var db = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '!Codinglab1122@',
-  database : 'codinglab',
+  host     : '',
+  user     : '',
+  password : '',
+  database : '',
 });
 db.connect();
 // Parse Settings
